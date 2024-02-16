@@ -12,7 +12,8 @@ const Container = styled.div``
 export default function TeamPage(){
     return(
         <Container>
-
+            <Header />
+            <Footer />
         </Container>
     )
 }
