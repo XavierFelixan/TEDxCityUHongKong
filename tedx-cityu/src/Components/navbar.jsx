@@ -5,7 +5,11 @@ import logoWhite from "../Assets/logo-white.png";
 
 const Container = styled.div``;
 const NavbarWrapper = styled.div``;
-const LogoWrapper = styled.div``;
+const LogoWrapper = styled.a`
+    &:hover {
+        cursor: pointer;
+    }
+`;
 const NavSelectionWrapper = styled.div``;
 const Selection = styled.a`
     &:hover {
