@@ -29,8 +29,8 @@ export default function Footer() {
                     </Copyright>
                 </CopyrightWrapper>
                 <SocialMediaWrapper className="flex justify-between items-center text-white">
-                    {Social_media_logo.map((logo) => (
-                        <SocialMediaLogoWrapper className="mx-11">
+                    {Social_media_logo.map((logo, index) => (
+                        <SocialMediaLogoWrapper key={index} className="mx-11">
                             {logo}
                         </SocialMediaLogoWrapper>
                     ))}

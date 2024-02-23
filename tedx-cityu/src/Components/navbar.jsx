@@ -29,8 +29,8 @@ export default function Navbar() {
                     <Logo src={logoWhite} alt="TEDxCityU" />
                 </LogoWrapper>
                 <NavSelectionWrapper className="flex justify-around items-end h-14">
-                    {Selection_list.map((selection) => (
-                        <Selection className="text-white mx-11">{selection}</Selection>
+                    {Selection_list.map((selection, index) => (
+                        <Selection key={index} className="text-white mx-11">{selection}</Selection>
                     ))}
                 </NavSelectionWrapper>
             </NavbarWrapper>
