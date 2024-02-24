@@ -20,6 +20,7 @@ module.exports = {
         cream: "#EBEDAC",
         offwhite: "#FFFFF3",
         gray: "#A1A1A1",
+        lightgray: "F5F5F5",
       },
     },
   },
