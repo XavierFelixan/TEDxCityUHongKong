@@ -1,0 +1,50 @@
+﻿[
+    {
+        "img": "",
+        "fname": "Ali Zain",
+        "lname": "Rehmatullah ",
+        "major": "Year 3, Computing Mathematics",
+        "origin": "Pakistan",
+        "position": "Speaker Relations Director"
+    },
+    {
+        "img": "",
+        "fname": "Entong",
+        "lname": "Xu",
+        "major": "Year 2, Linguistics and language application",
+        "origin": "China",
+        "position": "Speaker Relations Manager"
+    },
+    {
+        "img": "",
+        "fname": "Yu Ting ",
+        "lname": "Chou",
+        "major": "Year 3, Global Marketing",
+        "origin": "Taiwan",
+        "position": "Speaker Relations Manager"
+    },
+    {
+        "img": "",
+        "fname": "Insaf Idris",
+        "lname": "Sadakkathullah",
+        "major": "Year 4, Global Business, Finance",
+        "origin": "India",
+        "position": "Speaker Relations Manager"
+    },
+    {
+        "img": "",
+        "fname": "Gisela Gwen",
+        "lname": "Michelle",
+        "major": "Year 2, Global Business",
+        "origin": "Indonesia",
+        "position": "Speaker Relations Manager"
+    },
+    {
+        "img": "",
+        "fname": "Kithir Mohamed Hallaji",
+        "lname": "Abdul Gaffar",
+        "major": "Year 4, Management",
+        "origin": "India",
+        "position": "Speaker Relations Manager"
+    }
+]

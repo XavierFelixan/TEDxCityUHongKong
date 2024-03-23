@@ -7,6 +7,7 @@ import { MemberCard } from "../Components/membercard";
 import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 
 import technicalData from '../Data/technicalData.json';
+import curatorData from '../Data/curatorData.json';
 import creativeData from '../Data/creativeData.json';
 import eventManagementData from '../Data/eventManagementData.json';
 import financeSponsorshipData from '../Data/financeSponsorshipData.json';

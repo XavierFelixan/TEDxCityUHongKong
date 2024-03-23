@@ -1,34 +1,26 @@
 [
     {
-        "img": "Technical/Reynaldo.jpg",
-        "fname": "Reynaldo Augustinus",
-        "lname": "LUPING",
-        "major": "Year 4, BSc. Creative Media",
-        "origin": "Jakarta, Indonesia",
-        "position": "Technical Director"
+        "img": "Creative/Patricia",
+        "fname": "Patricia Christie",
+        "lname": "Djauhari",
+        "major": "Year 2, BAS",
+        "origin": "Indonesia",
+        "position": "Creative Director"
     },
     {
-        "img": "Technical/Ananda.jpg",
-        "fname": "Ananda Indra",
-        "lname": "TAN",
-        "major": "Year 3, BSc. Computer Science",
-        "origin": "Jakarta, Indonesia",
-        "position": "Technical Manager"
+        "img": "Creative/Teresa",
+        "fname": "Teresa",
+        "lname": "Jocelyn",
+        "major": "Year 3, Linguistics and language applications",
+        "origin": "Indonesia",
+        "position": "Graphic Design Manager"
     },
     {
-        "img": "Technical/Xavier.jpg",
-        "fname": "Xavier Felixan",
-        "lname": "MIJAATA",
-        "major": "Year 2, BSc. Data Science",
-        "origin": "Jakarta, Indonesia",
-        "position": "Technical Manager"
-    },
-    {
-        "img": "Technical/Nicholas.jpg",
-        "fname": "Nicholas Matthew",
-        "lname": "UTOMO",
-        "major": "Year 1, BSc. Data Science",
-        "origin": "Jakarta, Indonesia",
-        "position": "Technical Manager"
+        "img": "Creative/Teresa",
+        "fname": "Rachel",
+        "lname": "Law",
+        "major": "Year 1, Creative Media (Undeclared)",
+        "origin": "Hong Kong",
+        "position": "Creative Manager"
     }
 ]

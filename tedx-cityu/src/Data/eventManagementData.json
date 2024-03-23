@@ -1,0 +1,50 @@
+[
+    {
+        "img": "Event_Management/Khushi",
+        "fname": "Khushi",
+        "lname": "Rangdhol",
+        "major": "Year 2, Physics",
+        "origin": "India",
+        "position": "Event Management Director"
+    },
+    {
+        "img": "Event_Management/Advitiya",
+        "fname": "Advitiya",
+        "lname": "Dhakharia",
+        "major": "Year 2, Asian and International Studies",
+        "origin": "India",
+        "position": "Event Management Manager"
+    },
+    {
+        "img": "Event_Management/Angelique",
+        "fname": "Angelique",
+        "lname": "Sutanto",
+        "major": "Year 2, Data Science",
+        "origin": "Indonesia",
+        "position": "Event Management Manager"
+    },
+    {
+        "img": "Event_Management/Maurisia",
+        "fname": "Maurisia",
+        "lname": "Widjaja",
+        "major": "Year 1, Marketing",
+        "origin": "Indonesia",
+        "position": "Event Management Manager"
+    },
+    {
+        "img": "Event_Management/Adilkhan",
+        "fname": "Adilkhan",
+        "lname": "Orakbay",
+        "major": "Year 1, Computer Science",
+        "origin": "Kazakhstan",
+        "position": "Event Management Manager"
+    },
+    {
+        "img": "Event_Management/Prabin",
+        "fname": "Prabin",
+        "lname": "Thapa",
+        "major": "Year 2, Psychology",
+        "origin": "Nepal",
+        "position": "Event Management Manager"
+    }
+]
