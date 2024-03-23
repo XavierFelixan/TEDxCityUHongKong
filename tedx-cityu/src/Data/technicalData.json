@@ -1,6 +1,6 @@
 [
     {
-        "img": "../../Assets/Members/Technical/Reynaldo.jpg",
+        "img": "Technical/Reynaldo.jpg",
         "fname": "Reynaldo Augustinus",
         "lname": "LUPING",
         "major": "Year 4, BSc. Creative Media",
@@ -8,7 +8,7 @@
         "position": "Technical Director"
     },
     {
-        "img": "tedx-cityu/src/Assets/Members/Technical/Ananda.jpg",
+        "img": "Technical/Ananda.jpg",
         "fname": "Ananda Indra",
         "lname": "TAN",
         "major": "Year 3, BSc. Computer Science",
@@ -16,7 +16,7 @@
         "position": "Technical Manager"
     },
     {
-        "img": "tedx-cityu/src/Assets/Members/Technical/Xavier.jpg",
+        "img": "Technical/Xavier.jpg",
         "fname": "Xavier Felixan",
         "lname": "MIJAATA",
         "major": "Year 2, BSc. Data Science",
@@ -24,7 +24,7 @@
         "position": "Technical Manager"
     },
     {
-        "img": "tedx-cityu/src/Assets/Members/Technical/Nicholas.jpg",
+        "img": "Technical/Nicholas.jpg",
         "fname": "Nicholas Matthew",
         "lname": "UTOMO",
         "major": "Year 1, BSc. Data Science",
