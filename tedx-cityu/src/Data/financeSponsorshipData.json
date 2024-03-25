@@ -1,0 +1,26 @@
+[
+    {
+        "img": "Finance and Sponsorship/Hailey.jpg",
+        "fname": "Haewon",
+        "lname": "Jung",
+        "major": "Year 3, Management",
+        "origin": "Korea",
+        "position": "Finance & Sponsorships Director"
+    },
+    {
+        "img": "Finance and Sponsorship/Grigorii.jpg",
+        "fname": "Grigorii",
+        "lname": "Iunusov",
+        "major": "Year 2, Finance & BDAN",
+        "origin": "Russia",
+        "position": "F&S Manager"
+    },
+    {
+        "img": "Finance and Sponsorship/Queeney.jpg",
+        "fname": "Pandora Queeney",
+        "lname": "Gabrielle",
+        "major": "Year 2, Data Science",
+        "origin": "Indonesia",
+        "position": "F&S Manager"
+    }
+]

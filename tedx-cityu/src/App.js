@@ -1,14 +1,12 @@
 import styled from "styled-components";
+import TeamPage from "./Pages/teampage";
 
 const Container = styled.div``
-const TailwindTest = styled.div``;
 
 function App() {
   return (
     <Container>
-      <TailwindTest className="text-red-500 font-bold">
-        Hello World
-      </TailwindTest>
+      <TeamPage />
     </Container>
   );
 }

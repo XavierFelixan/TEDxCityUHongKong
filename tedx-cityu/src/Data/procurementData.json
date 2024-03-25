@@ -1,0 +1,26 @@
+[
+    {
+        "img": "Procurement/Afia.jpg",
+        "fname": "Afia",
+        "lname": "Addei",
+        "major": "Year 2, Psychology",
+        "origin": "Ghana",
+        "position": "Procurement Director"
+    },
+    {
+        "img": "Procurement/Kevin.jpg",
+        "fname": "Kevin",
+        "lname": "Setiawan",
+        "major": "Year 2, Finance",
+        "origin": "Indonesia",
+        "position": "Procurement Manager"
+    },
+    {
+        "img": "Procurement/Ernest.jpg",
+        "fname": "Ernest",
+        "lname": "Phang",
+        "major": "Year 2, Intelligent Manufacturing Engineering",
+        "origin": "Indonesia",
+        "position": "Procurement Manager"
+    }
+]

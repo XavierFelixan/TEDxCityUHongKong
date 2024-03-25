@@ -1,0 +1,26 @@
+[
+    {
+        "img": "Human Resources/Jeffrey.jpg",
+        "fname": "Jeffrey",
+        "lname": "Darsono",
+        "major": "Year 3, Psychology",
+        "origin": "Indonesia",
+        "position": "Human Resources Director"
+    },
+    {
+        "img": "Human Resources/Kenneth.jpg",
+        "fname": "Kenneth Russell",
+        "lname": "Setiawan",
+        "major": "Year 2, Civil Engineering",
+        "origin": "Indonesia",
+        "position": "Human Resources Manager"
+    },
+    {
+        "img": "Human Resources/Michelle.jpg",
+        "fname": "Michelle Rahardja",
+        "lname": "Chandra",
+        "major": "Year 2, Asian & International Studies",
+        "origin": "Indonesia",
+        "position": "Human Resources Manager"
+    }
+]
