@@ -1,6 +1,6 @@
 [
     {
-        "img": "",
+        "img": "Human Resources/Jeffrey.jpg",
         "fname": "Jeffrey",
         "lname": "Darsono",
         "major": "Year 3, Psychology",
@@ -8,7 +8,7 @@
         "position": "Human Resources Director"
     },
     {
-        "img": "",
+        "img": "Human Resources/Kenneth.jpg",
         "fname": "Kenneth Russell",
         "lname": "Setiawan",
         "major": "Year 2, Civil Engineering",
@@ -16,7 +16,7 @@
         "position": "Human Resources Manager"
     },
     {
-        "img": "",
+        "img": "Human Resources/Michelle.jpg",
         "fname": "Michelle Rahardja",
         "lname": "Chandra",
         "major": "Year 2, Asian & International Studies",

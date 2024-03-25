@@ -43,76 +43,80 @@ const DepartmentRadio = styled.input.attrs({
     type: "radio",
 })``;
 const CarouselWrapper = styled.div``;
-
+const MapContainer = styled.div``;
 
 export default function TeamPage(){
     
-    const list_of_department = ["Curators", "Creative", "Event_Management", "Finance_Sponsorship", "Human_Resources", "Speaker_Relations", "Marketing_Communication", "Procurement", "Technical"]
+    const list_of_department = {
+        "Curators": curatorData,
+        "Creative": creativeData,
+        "Event Management": eventManagementData,
+        "Finance and Sponsorship": financeSponsorshipData,
+        "Human Resources": humanResourcesData,
+        "Speaker Relations": speakerRelationsData,
+        "Marketing and Communication": marketingCommunicationData,
+        "Procurement": procurementData,
+        "Technical": technicalData
+    };
+
     const [Dept, setDept] = useState('Curators')
 
     const handleChange = (e) => {
         const department = e.target.value
         setDept(department)
-        console.log(Department)
+        console.log(department)
     }
 
     const RenderDepartment = (Dept) => {
-        let data = technicalData
-        // if (Dept === "Creative") {
-        //     data = creativeData
-        // }
-        // else if (Dept === "Event_Management") {
-        //     data = eventManagementData
-        // }
-        // else if (Dept === "Finance_Sponsorship") {
-        //     data = financeSponsorshipData
-        // }
-        // else if (Dept === "Human_Resources") {
-        //     data = humanResourcesData
-        // }
-        // else if (Dept === "Speaker_Relations") {
-        //     data = speakerRelationsData
-        // }
-        // else if (Dept === "Marketing_Communication") {
-        //     data = marketingCommunicationData
-        // }
-        // else if (Dept === "Procurement") {
-        //     data = procurementData
-        // }
-        // else if (Dept === "Technical") {
-        //     data = technicalData
-        // }
-        return (
-            <Splide
-                hasTrack={false}
-                options={{
-                    perPage: 3,
-                    rewind: true,
-                    width: "1100px",
-                    height: "400px",
-                    gap: '80px',
-                    type:"loop",
-                    arrows: true,
-                    pagination: false,
-                }}
-                className="splide justify-center items-center"
-            >
-                <SplideTrack>
-                    {data.map((item, index) => (
-                        <SplideSlide key={index}>
-                            <MemberCard
-                                img={require("../Assets/Members/" + item.img)}
-                                fname={item.fname}
-                                lname={item.lname}
-                                major={item.major}
-                                origin={item.origin}
-                                position={item.position}
-                            />
-                        </SplideSlide>
+        let data = list_of_department[Dept] || [];
+        if (Dept != 'Curators'){
+            return (
+                <Splide
+                    hasTrack={false}
+                    options={{
+                        perPage: 3,
+                        rewind: true,
+                        width: "1100px",
+                        height: "400px",
+                        gap: '80px',
+                        arrows: true,
+                        pagination: false,
+                    }}
+                    className="splide justify-center items-center"
+                >
+                    <SplideTrack>
+                        {data.map((item, index) => (
+                            <SplideSlide key={index}>
+                                <MemberCard
+                                    img={require("../Assets/Members/" + item.img)}
+                                    fname={item.fname}
+                                    lname={item.lname}
+                                    major={item.major}
+                                    origin={item.origin}
+                                    position={item.position}
+                                />
+                            </SplideSlide>
+                        ))}
+                    </SplideTrack>
+                </Splide>
+            );
+        }
+        else {
+            return(
+                <MapContainer className="w-[1100px] h-[400px] flex justify-around">
+                    {data.map((item, index) => (  
+                        <MemberCard key={index}
+                            img={require("../Assets/Members/" + item.img)}
+                            fname={item.fname}
+                            lname={item.lname}
+                            major={item.major}
+                            origin={item.origin}
+                            position={item.position}
+                        />
                     ))}
-                </SplideTrack>
-            </Splide>
-        );
+                </MapContainer>
+            )
+        }
     };
 
     return(
@@ -121,13 +125,13 @@ export default function TeamPage(){
             <Banner text={"The Crew"}/>
             <ContentWrapper className="flex items-center py-20 px-14">
                 <DepartmentWrapper className="flex flex-col">
-                    <DepartmentTitle className="text-2xl font-subheaderfont mb-8">
+                    <DepartmentTitle className="text-2xl font-textfont mb-8">
                         Department
                     </DepartmentTitle>
                     <DepartmentList className="flex flex-col">
-                        {list_of_department.map((department, index) => (
+                        {Object.keys(list_of_department).map((department, index) => (
                             <DepartmentMemberWrapper key={index} className="my-2.5">
-                                <DepartmentRadio id={department} name='department' className='hidden peer' value={department} onChange={handleChange} defaultChecked={department === "Technical"}/>
+                                <DepartmentRadio id={department} name='department' className='hidden peer' value={department} onChange={handleChange} defaultChecked={department === "Curators"}/>
                                 <Department htmlFor={department} className='w-full py-1 text-base text-gray border-b border-gray inline-flex peer-checked:text-black peer-checked:border-black peer-checked:border-b-2'>
                                     {department}
                                 </Department>
@@ -135,7 +139,7 @@ export default function TeamPage(){
                         ))}
                     </DepartmentList>
                 </DepartmentWrapper>
-                <CarouselWrapper className="ml-9 h-96 flex justify-center items-center justify-center">
+                <CarouselWrapper className="ml-9 h-96 flex justify-center items-center">
                     {RenderDepartment(Dept)}
                 </CarouselWrapper>
             </ContentWrapper>
