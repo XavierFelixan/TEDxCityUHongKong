@@ -9,3 +9,14 @@ import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 
 import Navbar from "../Components/navbar";
 import Footer from "../Components/footer";
+
+const Container = styled.div``;
+
+export default function AboutPage(){
+    return(
+        <Container>
+            <Navbar /> 
+            <Footer />
+        </Container>            
+    );
+}
