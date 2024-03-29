@@ -7,7 +7,7 @@ import { Banner } from "../Components/banner";
 
 import Navbar from "../Components/navbar";
 import Footer from "../Components/footer";
-import Counter from "../Components/counter";
+import Counter from "../Components/Counter";
 
 const Container = styled.div``;
 const Description = styled.div``;

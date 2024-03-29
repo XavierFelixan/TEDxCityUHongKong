@@ -6,7 +6,7 @@ import { styled } from "styled-components";
 
 import Navbar from "../Components/navbar";
 import Footer from "../Components/footer";
-import Counter from "../Components/counter";
+import Counter from "../Components/Counter";
 import AbouTedx from "../Components/aboutTedx";
 
 const Container = styled.div``;
