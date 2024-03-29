@@ -21,7 +21,7 @@ const Logo = styled.img``;
 
 
 export default function Navbar() {
-    const Selection_list = ["About", "Crew", "Past Event", "Registration"];
+    const Selection_list = ["About", "Sponsors", "Crew", "Past Event", "Registration"];
     return (
         <Container>
             <NavbarWrapper className="flex justify-between px-8 py-9 bg-black w-full max-h-28">

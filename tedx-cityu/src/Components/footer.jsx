@@ -16,7 +16,7 @@ const SocialMediaLogoWrapper = styled.a`
 `;
 export default function Footer() {
     const sizing = "w-7 h-7"
-    const Social_media_logo = [<AiOutlineInstagram className={sizing}/>, <AiOutlineFacebook className={sizing}/>, <AiOutlineMail className={sizing}/>]
+    // const Social_media_logo = [<AiOutlineInstagram className={sizing}/>, <AiOutlineFacebook className={sizing}/>, <AiOutlineMail className={sizing}/>]
     return (
         <Container>
             <FooterContainer className="flex justify-between items-center h-24 w-full bg-black px-8">
@@ -28,13 +28,13 @@ export default function Footer() {
                         &nbsp; TEDxCityUHong Kong
                     </Copyright>
                 </CopyrightWrapper>
-                <SocialMediaWrapper className="flex justify-between items-center text-white">
+                {/* <SocialMediaWrapper className="flex justify-between items-center text-white">
                     {Social_media_logo.map((logo, index) => (
                         <SocialMediaLogoWrapper key={index} className="mx-11">
                             {logo}
                         </SocialMediaLogoWrapper>
                     ))}
-                </SocialMediaWrapper>
+                </SocialMediaWrapper> */}
             </FooterContainer>
         </Container>
     )
