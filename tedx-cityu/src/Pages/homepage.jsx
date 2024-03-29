@@ -8,6 +8,7 @@ import Navbar from "../Components/navbar";
 import Footer from "../Components/footer";
 import Counter from "../Components/Counter";
 import AbouTedx from "../Components/aboutTedx";
+import SpeakerCard  from "../Components/SpeakerCard";
 
 const Container = styled.div``;
 
@@ -17,6 +18,7 @@ export default function HomePage(){
             <Navbar /> 
             <Counter />
             <AbouTedx />
+            <SpeakerCard/>
             <Footer />
         </Container>            
     );
