@@ -11,7 +11,7 @@ const TedxdescWrapper = styled.div``;
 const Tedxdesc = styled.div``;
 
 
-export default function AbouTedx(){
+export default function AboutTedx(){
     return(
         <Container className="flex justify-center mb-5 w-[100%] ">
             <ContentWrapper className="flex flex-col justify-center">
@@ -20,9 +20,14 @@ export default function AbouTedx(){
                 </Partition>
                 <TedxdescWrapper className="flex justify-center w-[1200px]">
                     <Tedxdesc>
-                        In the spirit of ideas worth spreading, TED has created a program called TEDx. TEDx is a program of local, self-organized events that bring people together to share a TED-like experience. 
-                        Our event is called <span className="text-red font-bold">TEDx</span><span className="font-bold">CityUHongKong 2024</span>, where x = independently organized TED event. At our <span className="text-red font-bold">TEDx</span><span className="font-bold">CityUHongKong 2024</span> event, TED Talks video and live speakers will combine to spark deep discussion and connection in a small group. 
-                        The TED Conference provides general guidance for the TEDx program, but individual TEDx events, including ours, are self-organized.
+                        In the spirit of ideas worth spreading, <span className="text-red font-bold">TED</span> has created a program called <span className="text-red font-bold">TEDx</span>.
+                        <span className="text-red font-bold"> TEDx</span> is a program of local, self-organized events that bring people together to share a <span className="text-red font-bold">TED</span>-like experience. 
+                        Our event is called <span className="text-red font-bold">TEDx</span><span className="font-bold">CityUHongKong 2024</span>, 
+                        where <span className="text-red font-bold">x</span> = independently organized <span className="text-red font-bold">TED</span> event. 
+                        At our <span className="text-red font-bold">TEDx</span><span className="font-bold">CityUHongKong 2024</span> event, 
+                        <span className="text-red font-bold"> TED</span> Talks video and live speakers will combine to spark deep discussion and connection in a small group. 
+                        The <span className="text-red font-bold">TED</span> Conference provides general guidance for the 
+                        <span className="text-red font-bold"> TEDx</span> program, but individual <span className="text-red font-bold">TEDx</span> events, including ours, are self-organized.
                     </Tedxdesc>
                 </TedxdescWrapper>
             </ContentWrapper>
