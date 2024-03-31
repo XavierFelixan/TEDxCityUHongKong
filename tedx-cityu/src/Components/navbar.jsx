@@ -22,11 +22,11 @@ const Logo = styled.img``;
 
 export default function Navbar() {
     const Selection_list = [
-        { label: "About", url: "https://www.google.com" },
-        { label: "Sponsors", url: "https://www.microsoft.com" },
-        { label: "Crew", url: "https://www.microsoft.com" },
-        { label: "Past Event", url: "https://www.microsoft.com" },
-        { label: "Registration", url: "https://www.microsoft.com" },
+        { label: "About", url: "aboutpage" },
+        { label: "Sponsors", url: "sponsorpage" },
+        { label: "Crew", url: "teampage" },
+        { label: "Past Event", url: "#" },
+        { label: "Registration", url: "https://docs.google.com/forms/d/e/1FAIpQLSfujwCWqpJWzu89hCKiVtBcFli5rVOhqM5uGHtO1AuZEcX6jg/viewform" },
     ];
 
     return (
