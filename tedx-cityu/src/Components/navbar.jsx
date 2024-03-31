@@ -38,7 +38,7 @@ export default function Navbar() {
                 <NavSelectionWrapper className="flex justify-around items-end h-14">
                     {Selection_list.map((selection, index) => (
                         <Selection key={index} className="text-white mx-11">
-                            <a href={selection.url} target="_blank" rel="noopener noreferrer">
+                            <a href={selection.url} target="_blank">
                                 {selection.label}
                             </a>
                         </Selection>
