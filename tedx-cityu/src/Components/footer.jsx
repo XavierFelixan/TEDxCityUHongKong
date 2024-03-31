@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { styled } from "styled-components";
-import { AiOutlineInstagram, AiOutlineFacebook, AiOutlineMail } from "react-icons/ai";
+import { AiOutlineInstagram, AiOutlineMail } from "react-icons/ai";
 
 
 const Container = styled.div``
@@ -16,7 +16,7 @@ const SocialMediaLogoWrapper = styled.a`
 `;
 export default function Footer() {
     const sizing = "w-7 h-7"
-    const Social_media_logo = [<AiOutlineInstagram className={sizing}/>, <AiOutlineFacebook className={sizing}/>, <AiOutlineMail className={sizing}/>]
+    const Social_media_logo = [<AiOutlineInstagram className={sizing}/>, /* <AiOutlineMail className={sizing}/> */]
     return (
         <Container>
             <FooterContainer className="flex justify-between items-center h-24 w-full bg-black px-8">
@@ -30,7 +30,7 @@ export default function Footer() {
                 </CopyrightWrapper>
                 { <SocialMediaWrapper className="flex justify-between items-center text-white">
                     {Social_media_logo.map((logo, index) => (
-                        <SocialMediaLogoWrapper key={index} className="mx-11">
+                        <SocialMediaLogoWrapper key={index} href="https://www.instagram.com/tedxcityuhongkong/" className="mx-11">
                             {logo}
                         </SocialMediaLogoWrapper>
                     ))}
