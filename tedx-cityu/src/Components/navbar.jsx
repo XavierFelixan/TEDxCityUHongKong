@@ -21,7 +21,14 @@ const Logo = styled.img``;
 
 
 export default function Navbar() {
-    const Selection_list = ["About", "Sponsors", "Crew", "Past Event", "Registration"];
+    const Selection_list = [
+        { label: "About", url: "https://www.google.com" },
+        { label: "Sponsors", url: "https://www.microsoft.com" },
+        { label: "Crew", url: "https://www.microsoft.com" },
+        { label: "Past Event", url: "https://www.microsoft.com" },
+        { label: "Registration", url: "https://www.microsoft.com" },
+    ];
+
     return (
         <Container>
             <NavbarWrapper className="flex justify-between px-8 py-9 bg-black w-full max-h-28">
@@ -30,7 +37,11 @@ export default function Navbar() {
                 </LogoWrapper>
                 <NavSelectionWrapper className="flex justify-around items-end h-14">
                     {Selection_list.map((selection, index) => (
-                        <Selection key={index} className="text-white mx-11">{selection}</Selection>
+                        <Selection key={index} className="text-white mx-11">
+                            <a href={selection.url} target="_blank" rel="noopener noreferrer">
+                                {selection.label}
+                            </a>
+                        </Selection>
                     ))}
                 </NavSelectionWrapper>
             </NavbarWrapper>
