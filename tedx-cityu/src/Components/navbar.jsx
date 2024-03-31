@@ -21,14 +21,7 @@ const Logo = styled.img``;
 
 
 export default function Navbar() {
-    const Selection_list = [
-        { label: "About", url: "aboutpage" },
-        { label: "Sponsors", url: "sponsorpage" },
-        { label: "Crew", url: "teampage" },
-        { label: "Past Event", url: "#" },
-        { label: "Registration", url: "https://docs.google.com/forms/d/e/1FAIpQLSfujwCWqpJWzu89hCKiVtBcFli5rVOhqM5uGHtO1AuZEcX6jg/viewform" },
-    ];
-
+    const Selection_list = ["About", "Sponsors", "Crew", "Past Event", "Registration"];
     return (
         <Container>
             <NavbarWrapper className="flex justify-between px-8 py-9 bg-black w-full max-h-28">
@@ -37,11 +30,7 @@ export default function Navbar() {
                 </LogoWrapper>
                 <NavSelectionWrapper className="flex justify-around items-end h-14">
                     {Selection_list.map((selection, index) => (
-                        <Selection key={index} className="text-white mx-11">
-                            <a href={selection.url} target="_blank" rel="noopener noreferrer">
-                                {selection.label}
-                            </a>
-                        </Selection>
+                        <Selection key={index} className="text-white mx-11">{selection}</Selection>
                     ))}
                 </NavSelectionWrapper>
             </NavbarWrapper>
