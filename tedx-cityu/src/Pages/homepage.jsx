@@ -7,7 +7,7 @@ import { styled } from "styled-components";
 import Navbar from "../Components/navbar";
 import Footer from "../Components/footer";
 import Counter from "../Components/Counter";
-import AbouTedx from "../Components/aboutTedx";
+import AboutTedx from "../Components/aboutTedx";
 import SpeakerCard  from "../Components/SpeakerCard";
 
 const Container = styled.div``;
@@ -17,7 +17,7 @@ export default function HomePage(){
         <Container className="min-h-72 w-full">
             <Navbar /> 
             <Counter />
-            <AbouTedx />
+            <AboutTedx />
             <SpeakerCard/>
             <Footer />
         </Container>            

@@ -30,15 +30,13 @@ const Speaker = ({data}) =>{
         <Container>
             <Wrapper>
                 {data.map((item,index)=>(
-                <div className="flex gap-20">
-                    <div className="">
-                        <img src= {require("../Assets/Members/Speaker/" + item.img) } alt={item.fname} className="w-48 h-48 ml-36 mb-3 rounded-md"/>
-                    </div>
+                <div className="flex gap-5 mt-10 mb-10">
+                    <img src= {require("../Assets/Members/Speaker/" + item.img) } alt={item.fname} className="object-scale-down w-48 h-48 ml-36 my-auto rounded-md"/>
                     <div>
-                        <div>
+                        <div className="font-bold text-3xl">
                             {item.fname}
                         </div>
-                        <div>
+                        <div className="mt-4 mr-36 text-lg">
                             {item.desc}
                         </div>
                     </div>
