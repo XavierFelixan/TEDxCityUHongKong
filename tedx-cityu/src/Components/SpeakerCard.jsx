@@ -27,15 +27,15 @@ export default function SpeakerCard() {
             </div>
             <CardWrapper>
             {Speakerdata.map((item, index) => (
-                            <Link className="my-2 " key={index} to={item.fname}>
-                                <Card className="overflow-hidden inline-block">
-                                    <Image src= {require("../Assets/Members/Speaker/" + item.img) } alt={item.fname} className="w-48 h-48 ml-36 mb-3 rounded-md hover:scale-110 transition-transform duration-500 cursor-pointer"/>
-                                </Card>
-                                <div className="text-center font-bold text-xl">
-                                    {item.fname}
-                                </div>
-                            </Link>
-                        ))}
+                <Link className="my-2" key={index} to={item.fname}>
+                    <Card className="flex justify-center items-center overflow-hidden inline-block">
+                        <Image src= {require("../Assets/Members/Speaker/" + item.img) } alt={item.fname} className="w-48 h-48 rounded-md hover:scale-110 transition-transform duration-500 cursor-pointer mx-auto"/>
+                    </Card>
+                    <div className="text-center font-bold text-xl mt-5">
+                        {item.fname}
+                    </div>
+                </Link>
+            ))}
             </CardWrapper>
         </Container>
     )
