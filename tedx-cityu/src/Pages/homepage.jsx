@@ -15,12 +15,12 @@ const Container = styled.div``;
 export default function HomePage(){
     return(
         <Container className="min-h-72 w-full">
-            <Navbar /> 
+            {/* <Navbar />  */}
             <Banner text={"TEDxCityU Hong Kong 2024"}/>
             <Counter />
             <AboutTedx />
             <SpeakerCard/>
-            <Footer />
+            {/* <Footer /> */}
         </Container>            
     );
 }

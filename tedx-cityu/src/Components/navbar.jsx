@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, NavLink } from "react-router-dom";
 import { styled } from "styled-components";
 import logoWhite from "../Assets/logo-white.png";
 
@@ -22,27 +22,36 @@ const Logo = styled.img``;
 
 export default function Navbar() {
     const Selection_list = [
-        { label: "About", url: "https://www.google.com" },
-        { label: "Sponsors", url: "https://www.microsoft.com" },
-        { label: "Crew", url: "https://www.microsoft.com" },
-        { label: "Past Event", url: "https://www.microsoft.com" },
-        { label: "Registration", url: "https://www.microsoft.com" },
+        { label: "About", url: "/about" },
+        // { label: "Sponsors", url: "/sponsor" },
+        { label: "Crew", url: "/crew" },
+        { label: "Past Event", url:"/pastevent"}
     ];
+    // const Selection_list = ["About", "Sponsors", "Crew", "Past Event", "Registration"];
+
+    const navigate = useNavigate();
+
+    const handleNavigate = (path) => {
+        navigate(path);
+    };
 
     return (
         <Container>
             <NavbarWrapper className="flex justify-between px-8 py-9 bg-black w-full max-h-28">
-                <LogoWrapper className="w-96 h-14">
+                <LogoWrapper className="w-96 h-14" onClick={() => handleNavigate(`/`)}>
                     <Logo src={logoWhite} alt="TEDxCityU" />
                 </LogoWrapper>
                 <NavSelectionWrapper className="flex justify-around items-end h-14">
                     {Selection_list.map((selection, index) => (
-                        <Selection key={index} className="text-white mx-11">
-                            <a href={selection.url} target="_blank">
+                        <Selection key={index} className="text-white mx-11" onClick={() => handleNavigate(`${selection.url}`)}>
+                            <a target="_blank">
                                 {selection.label}
                             </a>
                         </Selection>
                     ))}
+                    <Selection className="text-white mx-11">
+                        <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfujwCWqpJWzu89hCKiVtBcFli5rVOhqM5uGHtO1AuZEcX6jg/viewform">Registration</a>
+                    </Selection>
                 </NavSelectionWrapper>
             </NavbarWrapper>
         </Container>

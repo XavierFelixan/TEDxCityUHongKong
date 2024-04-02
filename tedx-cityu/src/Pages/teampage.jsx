@@ -121,7 +121,6 @@ export default function TeamPage(){
 
     return(
         <Container>
-            <Navbar />
             <Banner text={"The Crew"}/>
             <ContentWrapper className="flex items-center py-20 px-14">
                 <DepartmentWrapper className="flex flex-col">
@@ -143,7 +142,6 @@ export default function TeamPage(){
                     {RenderDepartment(Dept)}
                 </CarouselWrapper>
             </ContentWrapper>
-            <Footer />
         </Container>
     )
 }
