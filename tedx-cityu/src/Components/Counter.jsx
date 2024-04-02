@@ -17,7 +17,7 @@ const Desciprtion = styled.div``;
 
 export default function Counter(){
     return(
-        <Container className="flex justify-center mt-10">
+        <Container className="flex justify-center">
             <Wrapper className="flex items-center">
                 <Left className="flex flex-col items-center justify-center">
                     <CounterContainer className="flex flex-col justify-center bg-red h-72 w-[683px] py-9 px-14">
