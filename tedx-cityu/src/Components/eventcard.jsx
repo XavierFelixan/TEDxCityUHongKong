@@ -16,7 +16,7 @@ function EventCard({img, title, desc, MappedSpeakers}){
             <Image src={img} alt="pastevents"/>
           </ImageFlex>
           <TextFlex className="font-sans w-[59vw]"> 
-            <Text className="justify-center text-orange-800 text-4xl">{title}</Text>
+            <Text className="justify-center text-orange-800 text-4xl font-bold">{title}</Text>
             <Break />
             <Text>{desc}</Text>
             <Break />
