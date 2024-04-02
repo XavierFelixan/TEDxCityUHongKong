@@ -8,7 +8,7 @@ import { Banner } from "../Components/banner";
 import Navbar from "../Components/navbar";
 import Footer from "../Components/footer";
 import Counter from "../Components/Counter";
-import AboutTedx from "../Components/aboutTedx";
+import AboutTedxLong from "../Components/aboutTedxLong";
 
 const Container = styled.div``;
 const Description = styled.div``;
@@ -18,7 +18,7 @@ export default function AboutPage(){
     return(
         <Container>
             <Banner text={"About TEDx"}/>
-            <AboutTedx />
+            <AboutTedxLong />
         </Container>            
     );
 }
