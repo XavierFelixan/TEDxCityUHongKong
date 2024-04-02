@@ -22,7 +22,7 @@ export default function HomePage(){
             <AboutTedx />
             <SpeakerCard/>
             <Performer />
-            <Footer />
+            {/* <Footer /> */}
         </Container>            
     );
 }
