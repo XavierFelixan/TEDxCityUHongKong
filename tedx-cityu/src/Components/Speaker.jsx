@@ -45,7 +45,7 @@ const Speaker = ({data}) =>{
                             {item.desc}
                         </DescriptionWrapper>
                         <DescriptionWrapper className="mt-4 mr-36 text-lg">
-                            {item.link && <SpeakerLink href={item.link}>{item.link}</SpeakerLink>}
+                            {item.link && <SpeakerLink target="_blank" href={item.link}>{item.link}</SpeakerLink>}
                         </DescriptionWrapper>
                     </Wrapper>
                 </Wrapper>
