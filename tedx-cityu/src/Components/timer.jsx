@@ -63,16 +63,16 @@ export default function Timer(){
       }, []);
 
     return(
-        <Container className='flex my-4 items-end'>
+        <Container className="flex mx-auto md:mx-0 my-4 items-center md:items-end">
             {
                 Object.entries(Time).map(([unit, value]) => (
                     <>
-                    <Timebox className='flex items-center justify-center w-20 h-20'>
-                        <TimeNumber className='text-white text-3xl font-semibold font-textfont'>
+                    <Timebox className="flex items-center justify-center w-10 md:w-20 h-10 md:h-20">
+                        <TimeNumber className="text-white text-xl md:text-3xl font-medium font-textfont">
                             {value}
                         </TimeNumber>
                     </Timebox>
-                    <Timetext className='ml-2 mr-3 text-white text-1xl font-medium font-textfont'>
+                    <Timetext className="ml-2 mr-3 text-white text-md md:text-2xl font-medium font-textfont">
                         {unit}
                     </Timetext>
                     </>
