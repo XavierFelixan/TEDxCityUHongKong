@@ -23,6 +23,7 @@ const NavSelectionWrapper = styled.div`
   }
 `;
 const BurgerMenu = styled.div`
+  cursor: pointer;
   @media (min-width: 769px) {
     display: none;
   }
@@ -34,15 +35,18 @@ const MobileMenu = styled.div`
   background-color: black;
   width: 100%;
 `;
+
+// Apply Tailwind CSS classes directly for text color and alignment
 const Selection = styled.div`
   color: white;
-  margin: 0 16px;
-  &:hover {
-    color: #FCBA2E;
-    cursor: pointer;
-  }
+  text-align: center;
+  cursor: pointer;
 `;
-const Logo = styled.img``;
+
+const Logo = styled.img`
+  width: 70%;
+  height: auto;
+`;
 
 export default function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -63,31 +67,32 @@ export default function Navbar() {
     <Container>
       <NavbarWrapper>
         <LogoWrapper onClick={() => handleNavigate(`/`)}>
-          <Logo className="w-[70%]" src={logoWhite} alt="TEDxCityU" />
+          <Logo src={logoWhite} alt="TEDxCityU" />
         </LogoWrapper>
         <NavSelectionWrapper>
           {Selection_list.map((selection, index) => (
-            <Selection className="text-center" key={index} onClick={() => handleNavigate(selection.url)}>
+            // Add the Tailwind CSS classes here
+            <Selection key={index} onClick={() => handleNavigate(selection.url)} className="text-white text-center">
               {selection.label}
             </Selection>
           ))}
-          <Selection>
-            <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfujwCWqpJWzu89hCKiVtBcFli5rVOhqM5uGHtO1AuZEcX6jg/viewform">Registration</a>
+          <Selection className="text-white text-center">
+            <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSfujwCWqpJWzu89hCKiVtBcFli5rVOhqM5uGHtO1AuZEcX6jg/viewform">Registration</a>
           </Selection>
         </NavSelectionWrapper>
         <BurgerMenu onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-          <div className="text-white">☰</div>
+          <div className="text-white text-center">☰</div>
         </BurgerMenu>
       </NavbarWrapper>
       {isMobileMenuOpen && (
         <MobileMenu>
           {Selection_list.map((selection, index) => (
-            <Selection key={index} onClick={() => handleNavigate(selection.url)}>
+            <Selection key={index} onClick={() => handleNavigate(selection.url)} className="text-white text-center">
               {selection.label}
             </Selection>
           ))}
-          <Selection>
-            <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfujwCWqpJWzu89hCKiVtBcFli5rVOhqM5uGHtO1AuZEcX6jg/viewform">Registration</a>
+          <Selection className="text-white text-center">
+            <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSfujwCWqpJWzu89hCKiVtBcFli5rVOhqM5uGHtO1AuZEcX6jg/viewform">Registration</a>
           </Selection>
         </MobileMenu>
       )}
