@@ -69,7 +69,7 @@ export default function TeamPage(){
 
     const RenderDepartment = (Dept) => {
         let data = list_of_department[Dept] || [];
-        if (Dept != 'Curators'){
+        if (Dept !== 'Curators'){
             return (
                 <Splide
                     hasTrack={false}
