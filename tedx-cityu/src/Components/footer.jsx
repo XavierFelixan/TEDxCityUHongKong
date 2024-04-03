@@ -30,7 +30,7 @@ export default function Footer() {
                 </CopyrightWrapper>
                 { <SocialMediaWrapper className="flex justify-between items-center text-white">
                     {Social_media_logo.map((logo, index) => (
-                        <SocialMediaLogoWrapper key={index} href="https://www.instagram.com/tedxcityuhongkong/" className="mx-11">
+                        <SocialMediaLogoWrapper key={index} target="_blank" href="https://www.instagram.com/tedxcityuhongkong/" className="mx-11">
                             {logo}
                         </SocialMediaLogoWrapper>
                     ))}
