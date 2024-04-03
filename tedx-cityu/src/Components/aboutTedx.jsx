@@ -15,10 +15,10 @@ export default function AboutTedx(){
     return(
         <Container className="flex justify-center w-[100%] ">
             <ContentWrapper className="flex flex-col justify-center">
-                <Partition className="flex justify-center items-center min-w-full min-h-[400px] mb-5 bg-cover bg-no-repeat text-white text-7xl font-semibold font-textfond text-center md:text-left " style={{ backgroundImage: `url(${PastEvent})` }}>
+                <Partition className="flex justify-center items-center min-w-full min-h-[400px] mb-5 bg-cover bg-no-repeat text-white text-7xl font-semibold font-textfond text-center lg:text-left " style={{ backgroundImage: `url(${PastEvent})` }}>
                     What is TEDx
                 </Partition>
-                <TedxdescWrapper className="flex justify-center mx-5 md:mx-20 md:my-5 text-xl">
+                <TedxdescWrapper className="flex justify-center mx-5 lg:mx-20 lg:my-5 text-xl">
                     <Tedxdesc>
                         In the spirit of ideas worth spreading, <span className="text-red font-bold font-textfont">TED</span> has created a program called <span className="text-red font-bold">TEDx</span>.
                         <span className="text-red font-bold"> TEDx</span> is a program of local, self-organized events that bring people together to share a <span className="text-red font-bold">TED</span>-like experience. 

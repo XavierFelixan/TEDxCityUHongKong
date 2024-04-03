@@ -5,6 +5,7 @@ import { Banner } from "../Components/banner";
 
 
 import Navbar from "../Components/navbar";
+import MobileNavbar from "../Components/mobileNavbar"
 import Footer from "../Components/footer";
 import Counter from "../Components/Counter";
 import AboutTedx from "../Components/aboutTedx";
@@ -16,13 +17,11 @@ const Container = styled.div``;
 export default function HomePage(){
     return(
         <Container className="min-h-72 w-full">
-            {/* <Navbar />  */}
             <Banner text={"TEDxCityU Hong Kong 2024"}/>
             <Counter />
             <AboutTedx />
             <SpeakerCard/>
             <Performer />
-            {/* <Footer /> */}
         </Container>            
     );
 }
