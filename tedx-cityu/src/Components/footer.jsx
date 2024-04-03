@@ -19,12 +19,12 @@ export default function Footer() {
     const Social_media_logo = [<AiOutlineInstagram className={sizing}/>, /* <AiOutlineMail className={sizing}/> */]
     return (
         <Container>
-            <FooterContainer className="flex justify-between items-center h-24 w-full bg-black px-8">
+            <FooterContainer className="flex justify-between items-center h-24 w-full bg-black px-5 md:px-8">
                 <CopyrightWrapper className="flex">
-                    <Copyright className="text-gray">
+                    <Copyright className="text-gray text-md md:text-xl">
                         Copyright © 2024
                     </Copyright>
-                    <Copyright className="text-white">
+                    <Copyright className="text-white text-md md:text-xl">
                         &nbsp; TEDxCityUHong Kong
                     </Copyright>
                 </CopyrightWrapper>
