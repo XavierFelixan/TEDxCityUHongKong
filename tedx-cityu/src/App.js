@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TeamPage from "./Pages/teampage";
+import TeamPageMobile from "./Pages/teampageMobile"; // Import the mobile version
 import AboutPage from "./Pages/aboutpage";
 import HomePage from "./Pages/homepage";
 import PastEventPage from "./Pages/pasteventpage";
@@ -37,7 +38,8 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           {/* <Route path="/sponsor" element={<Sponsor />} /> */}
-          <Route path="/crew" element={<TeamPage />} />
+          // Render different component based on isMobile state
+          <Route path="/crew" element={isMobile ? <TeamPageMobile /> : <TeamPage />} />
           <Route path="/pastevent" element={<PastEventPage />} />
           <Route path="/speaker/:path" element={<SpeakerPage />} />
         </Routes>

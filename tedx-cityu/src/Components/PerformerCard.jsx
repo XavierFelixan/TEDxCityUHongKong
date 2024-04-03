@@ -22,7 +22,7 @@ const Data = styled.div``;
 export default function PerformerCard() {
     return (
         <Container>
-            <div className="font-bold text-center text-3xl py-3 md:text-7xl md:py-7">   
+            <div className="font-bold text-center text-3xl py-3 font-textfont md:text-7xl md:py-7">   
                 Performers
             </div>
             <CardWrapper>
@@ -31,7 +31,7 @@ export default function PerformerCard() {
                     <Card className="flex justify-center items-center overflow-hidden inline-block">
                         <Image src= {require("../Assets/Members/Performer/" + item.img) } alt={item.fname} className="w-26 h-26 md:w-48 md:h-48 rounded-md hover:scale-110 transition-transform duration-500 cursor-pointer mx-auto"/>
                     </Card>
-                    <div className="text-center font-bold text-md md:text-3xl mt-2 md:mt-5">
+                    <div className="text-center font-textfont font-bold text-md md:text-3xl mt-2 md:mt-5">
                         {item.fname}
                     </div>
                 </Link>

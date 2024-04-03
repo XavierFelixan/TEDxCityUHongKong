@@ -24,7 +24,7 @@ export default function Navbar() {
         { label: "About", url: "/about" },
         // { label: "Sponsors", url: "/sponsor" },
         { label: "Crew", url: "/crew" },
-        { label: "Past Event", url:"/pastevent"}
+        { label: "Past Events", url:"/pastevent"}
     ];
     const navigate = useNavigate();
 
@@ -40,13 +40,13 @@ export default function Navbar() {
                 </LogoWrapper>
                 <NavSelectionWrapper className="flex justify-around items-end h-14">
                     {Selection_list.map((selection, index) => (
-                        <Selection key={index} className="text-white mx-11 text-base lg:text-xl" onClick={() => handleNavigate(`${selection.url}`)}>
+                        <Selection key={index} className="text-white mx-11 text-base md:text-xl" onClick={() => handleNavigate(`${selection.url}`)}>
                             <a target="_blank">
                                 {selection.label}
                             </a>
                         </Selection>
                     ))}
-                    <Selection className="text-white mx-11 text-base lg:text-xl">
+                    <Selection className="text-white mx-11 text-base md:text-xl">
                         <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSfujwCWqpJWzu89hCKiVtBcFli5rVOhqM5uGHtO1AuZEcX6jg/viewform">Registration</a>
                     </Selection>
                 </NavSelectionWrapper>
