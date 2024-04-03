@@ -15,8 +15,13 @@ const ArtWrapper = styled.div``;
 const ArtPic = styled.img``;
 const Desciprtion = styled.div``;
 
-
-
+const Picture = styled.img``;
+const SpeakerLink = styled.a`
+    &:hover {
+        color: #0000EE;
+        cursor: pointer;
+    }
+`;
 
 
 const Speaker = ({data}) =>{
@@ -28,19 +33,22 @@ const Speaker = ({data}) =>{
     
     return(
         <Container>
-            <Wrapper>
+            <Wrapper className="flex gap-5 mt-10 mb-10">
                 {data.map((item,index)=>(
-                <div className="flex gap-5 mt-10 mb-10">
-                    <img src= {require("../Assets/Members/Speaker/" + item.img) } alt={item.fname} className="object-scale-down w-48 h-48 ml-36 my-auto rounded-md"/>
-                    <div>
-                        <div className="font-bold text-3xl">
+                <Wrapper className="flex gap-5 mt-10 mb-10">
+                    <Picture src= {require("../Assets/Members/Speaker/" + item.img) } alt={item.fname} className="object-scale-down w-48 h-48 ml-36 my-auto rounded-md"/>
+                    <Wrapper>
+                        <TitleText className="font-bold text-3xl">
                             {item.fname}
-                        </div>
-                        <div className="mt-4 mr-36 text-lg">
+                        </TitleText>
+                        <DescriptionWrapper className="mt-4 mr-36 text-lg">
                             {item.desc}
-                        </div>
-                    </div>
-                </div>
+                        </DescriptionWrapper>
+                        <DescriptionWrapper className="mt-4 mr-36 text-lg">
+                            {item.link && <SpeakerLink href={item.link}>{item.link}</SpeakerLink>}
+                        </DescriptionWrapper>
+                    </Wrapper>
+                </Wrapper>
                 ))}
             </Wrapper>
         </Container>

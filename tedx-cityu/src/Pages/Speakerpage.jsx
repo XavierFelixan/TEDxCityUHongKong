@@ -14,8 +14,8 @@ const Description = styled.div``;
 
 
 export default function Speakerpage(){
-  let Query = useParams().link;
-  const FilteredData = Speakerdata.filter((data) => data.link === Query);
+  let Query = useParams().path;
+  const FilteredData = Speakerdata.filter((data) => data.path === Query);
   
     return(
         <Container>
