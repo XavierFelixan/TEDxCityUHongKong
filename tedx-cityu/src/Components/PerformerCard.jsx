@@ -22,16 +22,16 @@ const Data = styled.div``;
 export default function PerformerCard() {
     return (
         <Container>
-            <div className="font-bold text-center text-4xl my-4">
+            <div className="font-bold text-center text-3xl py-3 md:text-7xl md:py-7">   
                 Performers
             </div>
             <CardWrapper>
             {Performerdata.map((item, index) => (
-                <Link className="my-2 flex flex-col items-center" key={index} to={item.fname}>
-                    <Card className="flex justify-center items-center overflow-hidden inline-block w-full">
-                        <Image src= {require("../Assets/Members/Performer/" + item.img) } alt={item.fname} className="w-48 h-48 mb-3 rounded-md hover:scale-110 transition-transform duration-500 cursor-pointer"/>
+                <Link className="my-2 mx-3 pb-5" key={index} to={item.fname}>
+                    <Card className="flex justify-center items-center overflow-hidden inline-block">
+                        <Image src= {require("../Assets/Members/Performer/" + item.img) } alt={item.fname} className="w-26 h-26 md:w-48 md:h-48 rounded-md hover:scale-110 transition-transform duration-500 cursor-pointer mx-auto"/>
                     </Card>
-                    <div className="text-center font-bold text-xl">
+                    <div className="text-center font-bold text-md md:text-3xl mt-2 md:mt-5">
                         {item.fname}
                     </div>
                 </Link>
