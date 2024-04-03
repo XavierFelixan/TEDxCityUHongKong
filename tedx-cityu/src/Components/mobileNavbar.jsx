@@ -17,11 +17,6 @@ const NavbarWrapper = styled.div`
 const LogoWrapper = styled.div`
   cursor: pointer;
 `;
-const NavSelectionWrapper = styled.div`
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
 const BurgerMenu = styled.div`
   cursor: pointer;
   @media (min-width: 769px) {
@@ -36,12 +31,7 @@ const MobileMenu = styled.div`
   width: 100%;
 `;
 
-// Apply Tailwind CSS classes directly for text color and alignment
-const Selection = styled.div`
-  color: white;
-  text-align: center;
-  cursor: pointer;
-`;
+const Selection = styled.div``;
 
 const Logo = styled.img`
   width: 70%;
@@ -69,17 +59,6 @@ export default function Navbar() {
         <LogoWrapper onClick={() => handleNavigate(`/`)}>
           <Logo src={logoWhite} alt="TEDxCityU" />
         </LogoWrapper>
-        <NavSelectionWrapper>
-          {Selection_list.map((selection, index) => (
-            // Add the Tailwind CSS classes here
-            <Selection key={index} onClick={() => handleNavigate(selection.url)} className="text-white text-center">
-              {selection.label}
-            </Selection>
-          ))}
-          <Selection className="text-white text-center">
-            <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSfujwCWqpJWzu89hCKiVtBcFli5rVOhqM5uGHtO1AuZEcX6jg/viewform">Registration</a>
-          </Selection>
-        </NavSelectionWrapper>
         <BurgerMenu onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
           <div className="text-white text-center">☰</div>
         </BurgerMenu>
@@ -87,11 +66,11 @@ export default function Navbar() {
       {isMobileMenuOpen && (
         <MobileMenu>
           {Selection_list.map((selection, index) => (
-            <Selection key={index} onClick={() => handleNavigate(selection.url)} className="text-white text-center">
+            <Selection key={index} onClick={() => handleNavigate(selection.url)} className="text-white text-center text-xl my-2">
               {selection.label}
             </Selection>
           ))}
-          <Selection className="text-white text-center">
+          <Selection className="text-white text-center text-xl my-2">
             <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSfujwCWqpJWzu89hCKiVtBcFli5rVOhqM5uGHtO1AuZEcX6jg/viewform">Registration</a>
           </Selection>
         </MobileMenu>
