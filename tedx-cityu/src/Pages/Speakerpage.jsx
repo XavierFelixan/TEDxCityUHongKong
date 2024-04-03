@@ -14,15 +14,15 @@ const Description = styled.div``;
 
 
 export default function Speakerpage(){
-  let Query = useParams().speakername
-  const FilteredData = Speakerdata.filter((data) => data.fname === Query)
+  let Query = useParams().path;
+  const FilteredData = Speakerdata.filter((data) => data.path === Query);
   
     return(
         <Container>
-            <Navbar /> 
+            {/* <Navbar />  */}
             <Banner text={"Speaker"}/>
             <Speaker data={FilteredData}/>
-            <Footer />
+            {/* <Footer /> */}
         </Container>            
     );
 }
