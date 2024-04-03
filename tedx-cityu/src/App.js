@@ -22,6 +22,7 @@ function App() {
           {/* <Route path="/sponsor" element={<Sponsor/>} /> */}
           <Route path="/crew" element={<TeamPage/>} />
           <Route path="/pastevent" element={<PastEventPage/>} />
+          <Route path="/speaker/:link" element={<SpeakerPage/>} />
       </Routes>
     </BrowserRouter>
     <Footer />
