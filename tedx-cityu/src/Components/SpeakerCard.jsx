@@ -31,7 +31,7 @@ export default function SpeakerCard() {
                     <Card className="flex justify-center items-center overflow-hidden inline-block">
                         <Image src= {require("../Assets/Members/Speaker/" + item.img) } alt={item.fname} className="w-26 h-26 lg:w-48 lg:h-48 rounded-md hover:scale-110 transition-transform duration-500 cursor-pointer mx-auto"/>
                     </Card>
-                    <div className="text-center font-bold text-md lg:text-3xl mt-2 lg:mt-5">
+                    <div className="text-center font-bold text-md lg:text-3xl mt-2 lg:mt-5 lg:mb-7 text-white">
                         {item.fname}
                     </div>
                 </Link>

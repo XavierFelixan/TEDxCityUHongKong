@@ -8,6 +8,7 @@ import PastEventPage from "./Pages/pasteventpage";
 import Navbar from "./Components/navbar";
 import MobileNavbar from "./Components/mobileNavbar";
 import Footer from "./Components/footer";
+import SpeakerPage from "./Pages/Speakerpage";
 
 const Container = styled.div`
   overflow-x: hidden;
@@ -38,6 +39,7 @@ function App() {
           {/* <Route path="/sponsor" element={<Sponsor />} /> */}
           <Route path="/crew" element={<TeamPage />} />
           <Route path="/pastevent" element={<PastEventPage />} />
+          <Route path="/speaker/:path" element={<SpeakerPage />} />
         </Routes>
         <Footer />
       </BrowserRouter>
