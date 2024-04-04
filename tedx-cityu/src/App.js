@@ -10,6 +10,7 @@ import Navbar from "./Components/navbar";
 import MobileNavbar from "./Components/mobileNavbar";
 import Footer from "./Components/footer";
 import SpeakerPage from "./Pages/Speakerpage";
+import PerformerPage from "./Pages/Performerpage";
 
 const Container = styled.div`
   overflow-x: hidden;
@@ -42,6 +43,7 @@ function App() {
           <Route path="/crew" element={isMobile ? <TeamPageMobile /> : <TeamPage />} />
           <Route path="/pastevent" element={<PastEventPage />} />
           <Route path="/speaker/:path" element={<SpeakerPage />} />
+          {/* <Route path="/performer/:path" element={<PerformerPage />} /> */}
         </Routes>
         <Footer />
       </BrowserRouter>
