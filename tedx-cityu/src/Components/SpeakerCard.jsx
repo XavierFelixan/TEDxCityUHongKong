@@ -27,7 +27,7 @@ export default function SpeakerCard() {
             </div>
             <CardWrapper>
             {Speakerdata.map((item, index) => (
-                <Link className="my-2 mx-3" key={index} to={`/speaker/${item.path}`}>
+                <Link className="my-2 mx-3" key={index} to={`/Speaker/${item.path}`}>
                     <Card className="flex justify-center items-center overflow-hidden inline-block">
                         <Image src= {require("../Assets/Members/Speaker/" + item.img) } alt={item.fname} className="w-26 h-26 md:w-48 md:h-48 rounded-md hover:scale-110 transition-transform duration-500 cursor-pointer mx-auto"/>
                     </Card>

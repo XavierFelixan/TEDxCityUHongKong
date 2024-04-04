@@ -2,16 +2,19 @@
   {
     "img": "performer1.png",
     "fname" : "To Be Announced",
+    "path" : "Performer1",
     "desc" : "To Be Announced"
   },
   {
     "img": "performer2.png",
     "fname" : "To Be Announced",
+    "path" : "Performer2",
     "desc" : "To Be Announced"
   },
   {
     "img": "performer3.png",
     "fname" : "To Be Announced",
+    "path" : "Performer3",
     "desc" : "To Be Announced"
   }
 ]

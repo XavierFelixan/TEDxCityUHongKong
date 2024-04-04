@@ -27,7 +27,7 @@ export default function PerformerCard() {
             </div>
             <CardWrapper>
             {Performerdata.map((item, index) => (
-                <Link className="my-2 mx-3 pb-5" key={index} to={item.fname}>
+                <Link className="my-2 mx-3 pb-5" key={index} to={`/Performer/${item.path}`}>
                     <Card className="flex justify-center items-center overflow-hidden inline-block">
                         <Image src= {require("../Assets/Members/Performer/" + item.img) } alt={item.fname} className="w-26 h-26 md:w-48 md:h-48 rounded-md hover:scale-110 transition-transform duration-500 cursor-pointer mx-auto"/>
                     </Card>
