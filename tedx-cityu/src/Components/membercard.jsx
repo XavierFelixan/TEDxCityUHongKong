@@ -19,13 +19,13 @@ export const MemberCard = ({img, fname, lname, major, origin, position}) => {
     return (
         <Container>
             <CardWrapper>
-                <Card className="flex flex-col items-center justify-center w-80 h-96 bg-lightgray pr-0">
+                <Card className="flex flex-col items-center justify-center w-80 h-96 bg-lightgray">
                     <Image src={img} alt={fname} className="w-32 h-32 rounded-full mb-3"/>
-                    <Data className="text-black text-lg font-textfont">{fname}</Data>
-                    <Data className="text-black text-lg font-textfont">{lname}</Data>
-                    <Data className="text-gray text-sm font-textfont">{major}</Data>
-                    <Data className="text-black text-sm font-textfont font-light mt-4">{origin}</Data>
-                    <Data className="text-black text-sm font-textfont font-semibold mt-20">{position}</Data>
+                    <Data className="text-black text-lg font-bold font-textfont">{fname}</Data>
+                    <Data className="text-black text-lg font-bold font-textfont">{lname}</Data>
+                    <Data className="text-black text-md font-textfont mt-5">{major}</Data>
+                    <Data className="text-black text-md font-textfont font-light mt-5">{origin}</Data>
+                    <Data className="text-black text-center text-lg font-textfont font-semibold mb-3 mt-5 mx-5">{position}</Data>
                 </Card>
             </CardWrapper>
         </Container>

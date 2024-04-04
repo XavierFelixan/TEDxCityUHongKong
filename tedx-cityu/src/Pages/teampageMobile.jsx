@@ -102,9 +102,9 @@ export default function TeamPage() {
     const RenderDepartment = (Dept) => {
         let data = list_of_department[Dept] || [];
         return (
-          <div className="flex flex-col overflow-y-auto w-full pt-3 mx-10">
+          <div>
             {data.map((item, index) => (
-              <div key={index} className="flex justify-center items-center p-4 mx-auto">
+              <div key={index} className="p-4 mx-auto">
                 <MemberCard
                   img={require("../Assets/Members/" + item.img)}
                   fname={item.fname}
@@ -112,7 +112,6 @@ export default function TeamPage() {
                   major={item.major}
                   origin={item.origin}
                   position={item.position}
-                  className="w-full text-center"
                 />
               </div>
             ))}

@@ -138,7 +138,7 @@ export default function TeamPage(){
                         ))}
                     </DepartmentList>
                 </DepartmentWrapper>
-                <CarouselWrapper className="ml-9 h-96 flex justify-center items-center">
+                <CarouselWrapper className="mx-auto h-96 flex justify-center items-center">
                     {RenderDepartment(Dept)}
                 </CarouselWrapper>
             </ContentWrapper>
