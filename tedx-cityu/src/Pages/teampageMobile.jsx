@@ -16,132 +16,139 @@ import speakerRelationsData from '../Data/speakerRelationsData.json';
 import marketingCommunicationData from '../Data/marketingCommunicationData.json';
 import procurementData from '../Data/procurementData.json';
 
+const breakpoints = {
+    mobile: '768px',
+  };
+  
+  const Container = styled.div`
+    overflow-x-hidden;
+    max-w-full;
+  `;
 
-
-import Navbar from "../Components/navbar";
-import Footer from "../Components/footer";
-
-const Container = styled.div``
-const ContentWrapper = styled.div``;
-const DepartmentWrapper = styled.div``;
-const DepartmentTitle = styled.div``;
-const DepartmentList = styled.div``;
-const DepartmentMemberWrapper = styled.div``;
-const Department = styled.label`
-    transition: all 200ms ease-out;
-    &:hover {
-        transition-timing-function: ease-in;
-        border-bottom: 2px solid;
-        color: black;
-        cursor: pointer;
+  const ContentWrapper = styled.div``;
+  
+  const DepartmentList = styled.div``;
+  
+  const CarouselWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  `;
+  
+  const BackButton = styled.button`
+    display: none;
+    @media (max-width: ${breakpoints.mobile}) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      z-index: 25;
     }
-    &:checked {
-        color: black;
+  `;
+  
+  const BurgerIcon = styled.div`
+    cursor: pointer;
+    z-index: 20;
+    div {
+        width: 30px;
+        height: 3px;
+        background-color: #333;
+        margin: 5px 0;
+        transition: 0.4s;
+    }
+    @media (min-width: ${breakpoints.mobile}) {
+        display: none;
+    }
+  `;
+  
+  const DepartmentWrapper = styled.div`
+    transition: transform 0.3s ease-out;
+    transform: ${({ isOpen }) => isOpen ? 'translateX(0)' : 'translateX(-100%)'};
+    z-index: 1000;
+    @media (max-width: ${breakpoints.mobile}) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 60%;
+        height: 100%;
+        background-color: white;
+        padding: 20px;
+        box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.5);
     }
 `;
-const DepartmentRadio = styled.input.attrs({
-    type: "radio",
-})``;
-const CarouselWrapper = styled.div``;
-const MapContainer = styled.div``;
 
-export default function TeamPage(){
-    
+export default function TeamPage() {
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [Dept, setDept] = useState('Curators');
+  
     const list_of_department = {
-        "Curators": curatorData,
-        "Creative": creativeData,
-        "Event Management": eventManagementData,
-        "Finance and Sponsorship": financeSponsorshipData,
-        "Human Resources": humanResourcesData,
-        "Speaker Relations": speakerRelationsData,
-        "Marketing and Communication": marketingCommunicationData,
-        "Procurement": procurementData,
-        "Technical": technicalData
+      "Curators": curatorData,
+      "Creative": creativeData,
+      "Event Management": eventManagementData,
+      "Finance and Sponsorship": financeSponsorshipData,
+      "Human Resources": humanResourcesData,
+      "Speaker Relations": speakerRelationsData,
+      "Marketing and Communication": marketingCommunicationData,
+      "Procurement": procurementData,
+      "Technical": technicalData
     };
-
-    const [Dept, setDept] = useState('Curators')
-
-    const handleChange = (e) => {
-        const department = e.target.value
-        setDept(department)
-        console.log(department)
+  
+    const handleChange = (department) => {
+      setDept(department);
     }
-
+  
     const RenderDepartment = (Dept) => {
         let data = list_of_department[Dept] || [];
-        if (Dept !== 'Curators'){
-            return (
-                <Splide
-                    hasTrack={false}
-                    options={{
-                        perPage: 3,
-                        rewind: true,
-                        width: "1100px",
-                        height: "400px",
-                        gap: '80px',
-                        arrows: true,
-                        pagination: false,
-                    }}
-                    className="splide justify-center items-center"
-                >
-                    <SplideTrack>
-                        {data.map((item, index) => (
-                            <SplideSlide key={index}>
-                                <MemberCard
-                                    img={require("../Assets/Members/" + item.img)}
-                                    fname={item.fname}
-                                    lname={item.lname}
-                                    major={item.major}
-                                    origin={item.origin}
-                                    position={item.position}
-                                />
-                            </SplideSlide>
-                        ))}
-                    </SplideTrack>
-                </Splide>
-            );
-        }
-        else {
-            return(
-                <MapContainer className="w-[1100px] h-[400px] flex justify-around">
-                    {data.map((item, index) => (  
-                        <MemberCard key={index}
-                            img={require("../Assets/Members/" + item.img)}
-                            fname={item.fname}
-                            lname={item.lname}
-                            major={item.major}
-                            origin={item.origin}
-                            position={item.position}
-                        />
-                    ))}
-                </MapContainer>
-            )
-        }
-    };
-
-    return(
+        return (
+          <div className="flex flex-col overflow-y-auto w-full pt-3 mx-10">
+            {data.map((item, index) => (
+              <div key={index} className="flex justify-center items-center p-4 mx-auto">
+                <MemberCard
+                  img={require("../Assets/Members/" + item.img)}
+                  fname={item.fname}
+                  lname={item.lname}
+                  major={item.major}
+                  origin={item.origin}
+                  position={item.position}
+                  className="w-full text-center"
+                />
+              </div>
+            ))}
+          </div>
+        );
+      };
+  
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+      };
+    
+      return (
         <Container>
-            <Banner text={"The Crew"}/>
-            <ContentWrapper className="flex items-center py-20 px-14">
-                <DepartmentWrapper className="flex flex-col">
-                    <DepartmentTitle className="text-2xl font-textfont mb-8">
-                        Department
-                    </DepartmentTitle>
-                    <DepartmentList className="flex flex-col">
-                        {Object.keys(list_of_department).map((department, index) => (
-                            <DepartmentMemberWrapper key={index} className="my-2.5">
-                                <DepartmentRadio id={department} name='department' className='hidden peer' value={department} onChange={handleChange} defaultChecked={department === "Curators"}/>
-                                <Department htmlFor={department} className='w-full py-1 text-base text-gray border-b border-gray inline-flex peer-checked:text-black peer-checked:border-black peer-checked:border-b-2'>
-                                    {department}
-                                </Department>
-                            </DepartmentMemberWrapper>
-                        ))}
-                    </DepartmentList>
-                </DepartmentWrapper>
-                <CarouselWrapper className="ml-9 h-96 flex justify-center items-center">
-                    {RenderDepartment(Dept)}
-                </CarouselWrapper>
-            </ContentWrapper>
+          <Banner text={"The Crew"} />
+          <BurgerIcon isOpen={!menuOpen} onClick={toggleMenu} className="p-5">
+            <div />
+            <div />
+            <div />
+          </BurgerIcon>
+          <ContentWrapper>
+            <DepartmentWrapper isOpen={menuOpen}>
+              <BackButton onClick={toggleMenu} className="font-bold text-2xl">
+                Back
+              </BackButton>
+              <DepartmentList className="pt-10 text-xl">
+                {Object.keys(list_of_department).map((department, index) => (
+                    <div key={index} className="cursor-pointer my-5" onClick={() => handleChange(department)}>
+                    {department}
+                    </div>
+                ))}
+              </DepartmentList>
+            </DepartmentWrapper>
+            <CarouselWrapper>
+              {RenderDepartment(Dept)}
+            </CarouselWrapper>
+          </ContentWrapper>
         </Container>
-    )
-}
+      );
+    }
