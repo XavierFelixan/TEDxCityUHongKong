@@ -124,14 +124,14 @@ export default function TeamPage(){
             <Banner text={"The Crew"}/>
             <ContentWrapper className="flex items-center py-20 px-14">
                 <DepartmentWrapper className="flex flex-col">
-                    <DepartmentTitle className="text-2xl font-textfont mb-8">
+                    <DepartmentTitle className="text-3xl font-bold font-textfont mb-8">
                         Department
                     </DepartmentTitle>
                     <DepartmentList className="flex flex-col">
                         {Object.keys(list_of_department).map((department, index) => (
                             <DepartmentMemberWrapper key={index} className="my-2.5">
                                 <DepartmentRadio id={department} name='department' className='hidden peer' value={department} onChange={handleChange} defaultChecked={department === "Curators"}/>
-                                <Department htmlFor={department} className='w-full py-1 text-base text-gray border-b border-gray inline-flex peer-checked:text-black peer-checked:border-black peer-checked:border-b-2'>
+                                <Department htmlFor={department} className='w-full py-1 text-xl text-base text-gray border-b border-gray inline-flex peer-checked:text-black peer-checked:border-black peer-checked:border-b-2'>
                                     {department}
                                 </Department>
                             </DepartmentMemberWrapper>

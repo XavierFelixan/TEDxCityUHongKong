@@ -11,7 +11,7 @@ const Break = styled.br``;
 
 function EventCard({ img, title, desc, MappedSpeakers }) {
   return (
-    <Container className="px-10 py-5 bg-slate-100 md:mx-20 md:flex">
+    <Container className="mx-5 md:mx-20 px-5 md:px-10 my-5 md:my-5 py-5 md:py-auto bg-slate-100 md:flex">
       <ImageFlex className="flex justify-center items-center h-64 w-64 md:h-96 md:w-96">
         <Image src={img} alt={title} className="max-w-full max-h-full object-contain"/>
       </ImageFlex>
