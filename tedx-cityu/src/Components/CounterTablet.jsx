@@ -113,7 +113,7 @@ export default function Counter() {
         </Left>
         <Right>
           <ArtWrapper>
-            <ArtPic src={Artpiece} alt="Artwork representing TEDxCityUHongKong 2024 event" />
+            <ArtPic src={Artpiece} alt="Artwork representing TEDxCityUHongKong 2024 event" className="mx-auto w-[60%] h-[60%]"/>
           </ArtWrapper>
         </Right>
       </Wrapper>
