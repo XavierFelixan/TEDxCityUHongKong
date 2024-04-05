@@ -12,6 +12,7 @@ import MobileNavbar from "./Components/navbarMobile";
 import TabletNavbar from "./Components/navbarTablet";
 import Footer from "./Components/footer";
 import SpeakerPage from "./Pages/Speakerpage";
+import PerformerPage from "./Pages/Performerpage";
 
 const Container = styled.div`
   overflow-x: hidden;
@@ -50,6 +51,7 @@ function App() {
           />
           <Route path="/pastevent" element={<PastEventPage />} />
           <Route path="/speaker/:path" element={<SpeakerPage />} />
+          {/* <Route path="/performer/:path" element={<PerformerPage />} /> */}
         </Routes>
         <Footer />
       </BrowserRouter>

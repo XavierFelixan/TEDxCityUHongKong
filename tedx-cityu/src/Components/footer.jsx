@@ -19,7 +19,7 @@ export default function Footer() {
     const Social_media_logo = [<AiOutlineInstagram className={sizing}/>, /* <AiOutlineMail className={sizing}/> */]
     return (
         <Container>
-            <FooterContainer className="flex justify-between items-center h-24 w-full bg-black px-5 md:px-8">
+            <FooterContainer className="flex justify-between items-center h-24 w-full bg-black px-5 md:px-12">
                 <CopyrightWrapper className="flex">
                     <Copyright className="text-gray font-textfont text-md md:text-xl">
                         Copyright © 2024 <span className="text-white">TEDxCityUHongKong</span>
@@ -27,7 +27,7 @@ export default function Footer() {
                 </CopyrightWrapper>
                 { <SocialMediaWrapper className="flex justify-between items-center font-textfont text-white">
                     {Social_media_logo.map((logo, index) => (
-                        <SocialMediaLogoWrapper key={index} target="_blank" href="https://www.instagram.com/tedxcityuhongkong">
+                        <SocialMediaLogoWrapper key={index} target="_blank" href="https://www.instagram.com/tedxcityuhongkong/">
                             {logo}
                         </SocialMediaLogoWrapper>
                     ))}
