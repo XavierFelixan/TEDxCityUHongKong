@@ -68,7 +68,7 @@ export default function Navbar() {
           <Logo src={logoWhite} alt="TEDxCityU" />
         </LogoWrapper>
         <BurgerMenu onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-          <div className="text-white text-center text-4xl">☰</div>
+          <div className="text-white text-center text-5xl">☰</div>
         </BurgerMenu>
       </NavbarWrapper>
       {isMobileMenuOpen && (

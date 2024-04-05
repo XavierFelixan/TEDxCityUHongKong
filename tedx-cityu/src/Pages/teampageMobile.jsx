@@ -52,7 +52,7 @@ const breakpoints = {
     cursor: pointer;
     z-index: 20;
     div {
-        width: 30px;
+        width: 25px;
         height: 3px;
         background-color: #333;
         margin: 5px 0;

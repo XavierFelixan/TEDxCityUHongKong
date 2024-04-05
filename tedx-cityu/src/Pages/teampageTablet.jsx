@@ -50,10 +50,10 @@ const BurgerIcon = styled.div`
   cursor: pointer;
   z-index: 20;
   div {
-    width: 30px;
+    width: 35px;
     height: 3px;
     background-color: #333;
-    margin: 5px 0;
+    margin: 10px 0;
     transition: 0.4s;
   }
   @media (min-width: ${breakpoints.tablet}) {
