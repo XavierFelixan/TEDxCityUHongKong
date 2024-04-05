@@ -16,11 +16,6 @@ import speakerRelationsData from '../Data/speakerRelationsData.json';
 import marketingCommunicationData from '../Data/marketingCommunicationData.json';
 import procurementData from '../Data/procurementData.json';
 
-
-
-import Navbar from "../Components/navbar";
-import Footer from "../Components/footer";
-
 const Container = styled.div``
 const ContentWrapper = styled.div``;
 const DepartmentWrapper = styled.div``;
@@ -138,7 +133,7 @@ export default function TeamPage(){
                         ))}
                     </DepartmentList>
                 </DepartmentWrapper>
-                <CarouselWrapper className="mx-auto h-96 flex justify-center items-center">
+                <CarouselWrapper className="ml-10 mx-auto h-96 flex justify-center items-center">
                     {RenderDepartment(Dept)}
                 </CarouselWrapper>
             </ContentWrapper>
