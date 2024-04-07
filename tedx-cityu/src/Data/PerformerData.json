@@ -2,16 +2,19 @@
   {
     "img": "Harshini.jpg",
     "fname" : "Harshini Anbazhagan",
-    "path" : "HarshiniAnbazhagan"
+    "path" : "HarshiniAnbazhagan",
+    "country": "India"
   },
   {
     "img": "Darren.jpg",
     "fname" : "Darren Kesuma",
-    "path" : "DarrenKesuma"
+    "path" : "DarrenKesuma",
+    "country": "Indonesia"
   },
   {
     "img": "Frederick.jpg",
     "fname" : "Frederick Nielsen Guretno",
-    "path" : "FrederickNielsenGuretno"
+    "path" : "FrederickNielsenGuretno",
+    "country": "Indonesia"
   }
 ]
