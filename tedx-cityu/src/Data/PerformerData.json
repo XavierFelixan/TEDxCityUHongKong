@@ -1,20 +1,17 @@
 [
   {
-    "img": "performer1.png",
-    "fname" : "To Be Announced",
-    "path" : "Performer1",
-    "desc" : "To Be Announced"
+    "img": "Harshini.jpg",
+    "fname" : "Harshini Anbazhagan",
+    "path" : "HarshiniAnbazhagan"
   },
   {
-    "img": "performer2.png",
-    "fname" : "To Be Announced",
-    "path" : "Performer2",
-    "desc" : "To Be Announced"
+    "img": "Darren.jpg",
+    "fname" : "Darren Kesuma",
+    "path" : "DarrenKesuma"
   },
   {
-    "img": "performer3.png",
-    "fname" : "To Be Announced",
-    "path" : "Performer3",
-    "desc" : "To Be Announced"
+    "img": "Frederick.jpg",
+    "fname" : "Frederick Nielsen Guretno",
+    "path" : "FrederickNielsenGuretno"
   }
 ]
