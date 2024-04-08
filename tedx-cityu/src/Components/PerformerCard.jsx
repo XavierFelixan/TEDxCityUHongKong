@@ -28,7 +28,7 @@ export default function PerformerCard() {
             </div>
             <CardWrapper>
             {Performerdata.map((item, index) => (
-                <Performer className="relative my-2 mx-3 pb-5" key={index} 
+                <Performer className="relative mb-4 md:mb-5 mx-3 pb-5" key={index} 
                 // to={`/Performer/${item.path}`}
                 >
                     <Card className="flex justify-center items-center overflow-hidden inline-block">
@@ -37,7 +37,7 @@ export default function PerformerCard() {
                     <div className="text-center font-textfont font-bold text-md md:text-3xl my-2 md:my-4">
                         {item.fname}
                     </div>
-                    <div className="absolute bottom-0 inset-x-0 text-center font-textfont text-md md:text-xl mt-2 text-zinc-500">
+                    <div className="absolute bottom-0 inset-x-0 text-center font-textfont text-md md:text-xl text-zinc-500">
                         {item.country}
                     </div>
                 </Performer>
