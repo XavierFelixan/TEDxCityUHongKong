@@ -20,7 +20,7 @@ export default function Timer(){
     });
 
     useEffect(() => {
-        const target = new Date('2024-04-13T00:00:00Z').getTime();
+        const target = new Date('2024-04-13T06:30:00Z').getTime();
         const now = new Date().getTime();
         const distance = target - now;
         if (distance < 0) {
