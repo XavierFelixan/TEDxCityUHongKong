@@ -9,12 +9,12 @@ import { Splide, SplideSlide, SplideTrack } from '@splidejs/react-splide';
 import technicalData from '../Data/technicalData.json';
 import curatorData from '../Data/curatorData.json';
 import creativeData from '../Data/creativeData.json';
-import eventManagementData from '../Data/eventManagementData.json';
+import eventManagementProcurementData from '../Data/eventManagementProcurementData.json';
 import financeSponsorshipData from '../Data/financeSponsorshipData.json';
 import humanResourcesData from '../Data/humanResourcesData.json';
 import speakerRelationsData from '../Data/speakerRelationsData.json';
 import marketingCommunicationData from '../Data/marketingCommunicationData.json';
-import procurementData from '../Data/procurementData.json';
+// import procurementData from '../Data/procurementData.json';
 
 const Container = styled.div``
 const ContentWrapper = styled.div``;
@@ -45,12 +45,11 @@ export default function TeamPage(){
     const list_of_department = {
         "Curators": curatorData,
         "Creative": creativeData,
-        "Event Management": eventManagementData,
+        "Event Management and Procurement": eventManagementProcurementData,
         "Finance and Sponsorship": financeSponsorshipData,
         "Human Resources": humanResourcesData,
         "Speaker Relations": speakerRelationsData,
         "Marketing and Communication": marketingCommunicationData,
-        "Procurement": procurementData,
         "Technical": technicalData
     };
 

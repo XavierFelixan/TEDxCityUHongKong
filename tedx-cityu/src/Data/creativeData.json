@@ -1,25 +1,41 @@
 [
     {
         "img": "Creative/Patricia.jpg",
-        "fname": "Patricia Christie",
-        "lname": "Djauhari",
-        "major": "Year 2, BAS",
-        "origin": "Indonesia",
+        "fname": "Law Tian En",
+        "lname": "Rachel",
+        "major": "Year 2, Creative Media",
+        "origin": "Hong Kong",
         "position": "Creative Director"
     },
     {
         "img": "Creative/Teresa.jpg",
-        "fname": "Teresa",
-        "lname": "Jocelyn",
-        "major": "Year 3, Linguistics and language applications",
-        "origin": "Indonesia",
+        "fname": "Cheng Hei Yu",
+        "lname": "Alanis",
+        "major": "Year 2, Creative Media",
+        "origin": "Hong Kong",
         "position": "Creative Manager"
     },
     {
         "img": "Creative/Rachel.jpg",
-        "fname": "Rachel",
-        "lname": "Law",
-        "major": "Year 1, Creative Media (Undeclared)",
+        "fname": "Lee Lok Yin",
+        "lname": "Ruby",
+        "major": "Year 4, Asian & International Studies",
+        "origin": "Hong Kong",
+        "position": "Creative Manager"
+    },
+    {
+        "img": "Creative/Rachel.jpg",
+        "fname": "Oh Seoyun",
+        "lname": "Kelly",
+        "major": "Year 3, Digital Television & Broadcasting",
+        "origin": "Hong Kong",
+        "position": "Creative Manager"
+    },
+    {
+        "img": "Creative/Rachel.jpg",
+        "fname": "Shum Wing Kei",
+        "lname": "Kathy",
+        "major": "Year 2, Creative Media",
         "origin": "Hong Kong",
         "position": "Creative Manager"
     }

@@ -1,42 +1,50 @@
 [
     {
         "img": "Speaker Relations/Ali.jpg",
-        "fname": "Ali Zain",
-        "lname": "Rehmatullah ",
-        "major": "Year 3, Computing Mathematics",
-        "origin": "Pakistan",
+        "fname": "Jeslyne Kaori",
+        "lname": "Purnomo",
+        "major": "Year 1, GBSM",
+        "origin": "Hong Kong",
         "position": "Speaker Relations Director"
     },
     {
-        "img": "Speaker Relations/Xu.jpg",
-        "fname": "Entong",
-        "lname": "Xu",
-        "major": "Year 2, Linguistics and language application",
-        "origin": "China",
-        "position": "Speaker Relations Manager"
-    },
-    {
-        "img": "Speaker Relations/Tim.jpg",
-        "fname": "Yu Ting ",
-        "lname": "Chou",
-        "major": "Year 3, Global Marketing",
-        "origin": "Taiwan",
+        "img": "Speaker Relations/Ali.jpg",
+        "fname": "Yum Hau Man",
+        "lname": "Alice",
+        "major": "Year 2, Data & System Engineering",
+        "origin": "Hong Kong",
         "position": "Speaker Relations Manager"
     },
     {
         "img": "Speaker Relations/Gwen.jpg",
-        "fname": "Gisela Gwen",
-        "lname": "Michelle",
-        "major": "Year 2, Global Business",
+        "fname": "Fuyane",
+        "lname": "Dumezweni",
+        "major": "Year 2, Creative Media",
         "origin": "Indonesia",
         "position": "Speaker Relations Manager"
     },
     {
         "img": "Speaker Relations/Hallaji.jpg",
-        "fname": "Kithir Mohamed Hallaji",
-        "lname": "Abdul Gaffar",
-        "major": "Year 4, Management",
-        "origin": "India",
+        "fname": "Therese Mendoza",
+        "lname": "Go",
+        "major": "Year 2, Architecture",
+        "origin": "Phillipines",
+        "position": "Speaker Relations Manager"
+    },
+    {
+        "img": "Speaker Relations/Xu.jpg",
+        "fname": "Elycia Trishelle",
+        "lname": "Tandiawan",
+        "major": "Year 1, Global Business",
+        "origin": "Indonesia",
+        "position": "Speaker Relations Manager"
+    },
+    {
+        "img": "Speaker Relations/Xu.jpg",
+        "fname": "Entong",
+        "lname": "Xu",
+        "major": "Year 3, Linguistics and Language Application",
+        "origin": "China",
         "position": "Speaker Relations Manager"
     }
 ]

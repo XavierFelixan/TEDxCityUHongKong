@@ -1,18 +1,18 @@
 [
     {
         "img": "Curators/Gabriela.jpg",
-        "fname": "Gabriela Amanda",
-        "lname": "Wilham",
-        "major": "Year 2, Data Science",
-        "origin": "Indonesia",
+        "fname": "Haerin",
+        "lname": "Lee",
+        "major": "Year 2, Media & Communication",
+        "origin": "South Korea",
         "position": "Lead Organizer/Resources Curator"
     },
     {
         "img": "Curators/Winny.jpg",
-        "fname": "Winny",
-        "lname": "Willyska",
-        "major": "Year 2, Psychology",
-        "origin": "Indonesia",
+        "fname": "Prabin",
+        "lname": "Thapa",
+        "major": "Year 3, Psychology",
+        "origin": "Nepal",
         "position": "Lead Organizer/Resources Curator"
     }
 ]
