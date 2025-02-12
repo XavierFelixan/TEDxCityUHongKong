@@ -1,6 +1,6 @@
 [
     {
-        "img": "Speaker Relations/Ali.jpg",
+        "img": "Speaker Relations/Jeslyne.jpeg",
         "fname": "Jeslyne Kaori",
         "lname": "Purnomo",
         "major": "Year 1, GBSM",
@@ -8,7 +8,7 @@
         "position": "Speaker Relations Director"
     },
     {
-        "img": "Speaker Relations/Ali.jpg",
+        "img": "Speaker Relations/Alice.JPG",
         "fname": "Yum Hau Man",
         "lname": "Alice",
         "major": "Year 2, Data & System Engineering",
@@ -16,15 +16,15 @@
         "position": "Speaker Relations Manager"
     },
     {
-        "img": "Speaker Relations/Gwen.jpg",
-        "fname": "Fuyane",
-        "lname": "Dumezweni",
+        "img": "Speaker Relations/Dumezweni.jpeg",
+        "fname": "Dumezweni",
+        "lname": "Fuyane",
         "major": "Year 2, Creative Media",
         "origin": "Indonesia",
         "position": "Speaker Relations Manager"
     },
     {
-        "img": "Speaker Relations/Hallaji.jpg",
+        "img": "Speaker Relations/Therese.jpeg",
         "fname": "Therese Mendoza",
         "lname": "Go",
         "major": "Year 2, Architecture",
@@ -32,7 +32,7 @@
         "position": "Speaker Relations Manager"
     },
     {
-        "img": "Speaker Relations/Xu.jpg",
+        "img": "Speaker Relations/Elycia.jpeg",
         "fname": "Elycia Trishelle",
         "lname": "Tandiawan",
         "major": "Year 1, Global Business",
@@ -40,7 +40,7 @@
         "position": "Speaker Relations Manager"
     },
     {
-        "img": "Speaker Relations/Xu.jpg",
+        "img": "Speaker Relations/Entong.jpeg",
         "fname": "Entong",
         "lname": "Xu",
         "major": "Year 3, Linguistics and Language Application",

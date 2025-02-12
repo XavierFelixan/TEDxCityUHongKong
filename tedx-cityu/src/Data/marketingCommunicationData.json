@@ -1,6 +1,6 @@
 [
     {
-        "img": "Marketing and Communication/RaiLisa.jpg",
+        "img": "Marketing and Communication/Rose.jpeg",
         "fname": "Rose Anastasia",
         "lname": "Flaminiano",
         "major": "Year 3, English",
@@ -8,7 +8,7 @@
         "position": "Marketing and Communication Director"
     },
     {
-        "img": "Marketing and Communication/Ayesha.jpg",
+        "img": "Marketing and Communication/Moon.jpg",
         "fname": "Moon",
         "lname": "Barua",
         "major": "Year 4, English",
@@ -16,7 +16,7 @@
         "position": "Marketing and Communication Manager"
     },
     {
-        "img": "Marketing and Communication/LisaSeo.jpg",
+        "img": "Marketing and Communication/Michael.jpg",
         "fname": "Michael Terence",
         "lname": "Basarah",
         "major": "Year 1, Engineering",
@@ -24,7 +24,7 @@
         "position": "Marketing and Communication Manager"
     },
     {
-        "img": "Marketing and Communication/Haerin.jpg",
+        "img": "Marketing and Communication/Arnav.png",
         "fname": "Arnav",
         "lname": "Bhavnani",
         "major": "Year 2, Finance",
@@ -32,16 +32,16 @@
         "position": "Marketing and Communication Manager"
     },
     {
-        "img": "Marketing and Communication/Ayesha.jpg",
-        "fname": "Ansleigh",
+        "img": "Marketing and Communication/Ansleigh.jpeg",
+        "fname": "Ansleigh Mendoza",
         "lname": "Go",
         "major": "Year 2, Global Operations Management",
         "origin": "Phillipines",
         "position": "Marketing and Communication Manager"
     },
     {
-        "img": "Marketing and Communication/Anmol.jpg",
-        "fname": "Aurel",
+        "img": "Marketing and Communication/Aurell.jpeg",
+        "fname": "Aurell",
         "lname": "Wijaya",
         "major": "Year 2, Biological Science",
         "origin": "Indonesia",

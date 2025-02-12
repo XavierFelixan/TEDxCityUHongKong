@@ -1,6 +1,6 @@
 [
     {
-        "img": "Human Resources/Jeffrey.jpg",
+        "img": "Human Resources/Riley.jpeg",
         "fname": "Ngai Tak Wai",
         "lname": "Riley",
         "major": "Year 4, Management",
@@ -8,7 +8,7 @@
         "position": "Human Resources Director"
     },
     {
-        "img": "Human Resources/Kenneth.jpg",
+        "img": "Human Resources/Alicia.jpeg",
         "fname": "Leung Pak Yan",
         "lname": "Alicia",
         "major": "Year 3, Psychology",
@@ -16,7 +16,7 @@
         "position": "Human Resources Manager"
     },
     {
-        "img": "Human Resources/Kenneth.jpg",
+        "img": "Human Resources/Maria.jpeg",
         "fname": "Maria Nadine",
         "lname": "Nathania",
         "major": "Year 1, Global Business",
@@ -32,7 +32,7 @@
         "position": "Human Resources Manager"
     },
     {
-        "img": "Human Resources/Michelle.jpg",
+        "img": "Human Resources/Maurisia.jpeg",
         "fname": "Maurisia",
         "lname": "Widjaja",
         "major": "Year 2, Marketing",
@@ -40,7 +40,7 @@
         "position": "Human Resources Manager"
     },
     {
-        "img": "Human Resources/Michelle.jpg",
+        "img": "Human Resources/Judy.JPG",
         "fname": "Yeh Chih Yu",
         "lname": "Judy",
         "major": "Year 2, Marketing",
