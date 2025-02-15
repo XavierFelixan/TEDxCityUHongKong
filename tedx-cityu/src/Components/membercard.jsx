@@ -1,26 +1,25 @@
-import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import React from "react";
 import { styled } from "styled-components";
 
-
-
-
-const Container = styled.div``
+const Container = styled.div``;
 const CardWrapper = styled.div``;
 const Card = styled.div`
     box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
 `;
-const Image = styled.img``;
+const Image = styled.img`
+    width: 128px;
+    height: 128px;
+    border-radius: 50%;
+    object-fit: cover; /* Or use 'contain' depending on your preference */
+`;
 const Data = styled.div``;
 
-
-
-export const MemberCard = ({img, fname, lname, major, origin, position}) => {
+export const MemberCard = ({ img, fname, lname, major, origin, position }) => {
     return (
         <Container>
             <CardWrapper>
                 <Card className="flex flex-col items-center justify-center md:w-100 lg:w-80 md:h-auto lg:h-120 bg-lightgray">
-                    <Image src={img} alt={fname} className="w-32 h-32 rounded-full mb-3"/>
+                    <Image src={img} alt={fname} />
                     <Data className="text-black text-lg md:text-2xl font-bold font-textfont">{fname}</Data>
                     <Data className="text-black text-lg md:text-2xl font-bold font-textfont">{lname}</Data>
                     <Data className="text-black text-md md:text-xl font-textfont mt-5">{major}</Data>
@@ -29,5 +28,5 @@ export const MemberCard = ({img, fname, lname, major, origin, position}) => {
                 </Card>
             </CardWrapper>
         </Container>
-    )
-}
+    );
+};
