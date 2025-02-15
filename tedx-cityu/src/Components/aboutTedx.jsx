@@ -6,20 +6,41 @@ import PastSpeaker from "../Assets/Pastspeaker.png";
 import TEDTeam from "../Assets/TEDTeam.png";
 
 
-const Container = styled.div``
+const Container = styled.div``;
 const ContentWrapper = styled.div``;
 const Partition = styled.div``;
 const TedxdescWrapper = styled.div``;
 const Tedxdesc = styled.div``;
 
-const Left = styled.div``;
-const Right = styled.div``;
+
+const Left1 = styled.div`
+    float:right;
+    width:30%;
+    margin: 0 0 0 1.3rem;
+
+    @media (max-width: 768px){
+        width:100%;
+        margin: 0 0 1rem 0;
+    }
+`;
+const Left2 = styled.div`
+    float:left;
+    width:30%;
+    // margin: 0 1.3rem 0 0;
+
+    @media (max-width: 768px){
+        width:100%;
+        margin: 0 0 0.5rem 0;
+    }
+`;
+
+const Right = styled.div`
+`;
 
 
 const ArtWrapper = styled.div`
   margin-top: 1.5rem;
   display: flex;
-  justify-content: center;
   align-items: center;
 
   @media (min-width: 768px) and (max-width: 1023px) { // Tablet view
@@ -32,15 +53,14 @@ const ArtWrapper = styled.div`
   @media (min-width: 1024px) {
     margin-top: 0;
   }
+
+  @media (max-width: 768px){
+    justify-content: center !important;
+  }
 `;
 
-const ArtPic1 = styled.img`
-  width: 70%;
-  height: auto;
-`;
-
-const ArtPic2 = styled.img`
-  width: 100%;
+const ArtPic = styled.img`
+  width: 95%;
   height: auto;
 `;
 
@@ -66,29 +86,30 @@ export default function AboutTedx({show = true}){
                     </Tedxdesc>}
                     
                     {show && <Tedxdesc className="my-5 md:my-12 className=text-lg">
-                        <Container className="flex">
-                            <Left className="w-full md:w-2/3">
-                                <div className="font-bold text-2xl md:text-3xl mb-5">
+                        <Container>
+                            <Left1>
+                                <ArtWrapper style={{"justify-content":"right"}}>
+                                        <ArtPic src={PastSpeaker} alt="TEDxCityUHongKong 2024 Art"/>
+                                </ArtWrapper>
+                                
+                            </Left1>
+                            <Right className="w-full">
+                            <div className="font-bold text-2xl md:text-3xl mb-5">
                                     About <span className="text-red font-bold">TEDx</span>, <span className="text-red font-bold">x</span> = independently organized event
                                 </div>
                                 <div className="text-base md:text-xl text-justify">
                                     In the spirit of ideas worth spreading, <span className="text-red font-bold">TEDx</span> is a program of local, self-organized events that bring people together to share a <span className="text-red font-bold">TED</span>-like experience. At a <span className="text-red font-bold">TEDx</span> event, <span className="text-red font-bold">TED</span> Talks video and live speakers combine to spark deep discussion and connection. These local, self-organized events are branded <span className="text-red font-bold">TEDx</span>, where <span className="text-red font-bold">x</span> = independently organized <span className="text-red font-bold">TED</span> event. The <span className="text-red font-bold">TED</span> Conference provides general guidance for the <span className="text-red font-bold">TEDx</span> program, but individual <span className="text-red font-bold">TEDx</span> events are self-organized. (Subject to certain rules and regulations.)
                                 </div>
-                            </Left>
-                            <Right className="w-full md:w-1/2">
-                                <ArtWrapper>
-                                        <ArtPic1 src={PastSpeaker} alt="TEDxCityUHongKong 2024 Art" className="mx-auto w-[60%] h-[60%]"/>
-                                </ArtWrapper>
                             </Right>
                         </Container>
-                        <Container className="flex my-10">
-                            <Left className="w-full md:w-1/3 flex mx-5">
+                        <Container style={{clear:"both","margin-top":"8%"}}>
+                            <Left2>
                                 <ArtWrapper>
-                                        <ArtPic2 src={TEDTeam} alt="TEDxCityUHongKong 2024 Art" className="mx-auto w-[60%] h-[60%]"/>
+                                        <ArtPic src={TEDTeam} alt="TEDxCityUHongKong 2024 Art"/>
                                 </ArtWrapper>
-                            </Left>
+                            </Left2>
 
-                            <Right className="w-full md:w-2/3">
+                            <Right className="w-full">
                                 <div className="font-bold text-2xl md:text-3xl mt-7 mb-5">
                                     <span className="font-bold">About </span><span className="text-red font-bold">TED</span>
                                 </div>
