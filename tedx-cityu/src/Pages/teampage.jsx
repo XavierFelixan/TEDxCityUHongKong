@@ -14,13 +14,25 @@ import financeSponsorshipData from '../Data/financeSponsorshipData.json';
 import humanResourcesData from '../Data/humanResourcesData.json';
 import speakerRelationsData from '../Data/speakerRelationsData.json';
 import marketingCommunicationData from '../Data/marketingCommunicationData.json';
-// import procurementData from '../Data/procurementData.json';
 
 const Container = styled.div``
-const ContentWrapper = styled.div``;
-const DepartmentWrapper = styled.div``;
-const DepartmentTitle = styled.div``;
-const DepartmentList = styled.div``;
+const ContentWrapper = styled.div`
+  display: flex;
+  padding: 20px;
+`;
+const DepartmentWrapper = styled.div`
+  width: 200px;
+  margin-right: 20px;
+`;
+const DepartmentTitle = styled.div`
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+`;
+const DepartmentList = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 const DepartmentMemberWrapper = styled.div``;
 const Department = styled.label`
     transition: all 200ms ease-out;
@@ -37,8 +49,13 @@ const Department = styled.label`
 const DepartmentRadio = styled.input.attrs({
     type: "radio",
 })``;
-const CarouselWrapper = styled.div``;
-const MapContainer = styled.div``;
+const CarouselWrapper = styled.div`
+  width: 100%;
+`;
+
+const StyledMemberCard = styled(MemberCard)`
+  height: 500px;
+`;
 
 export default function TeamPage(){
     
@@ -63,54 +80,43 @@ export default function TeamPage(){
 
     const RenderDepartment = (Dept) => {
         let data = list_of_department[Dept] || [];
-        if (Dept !== 'Curators'){
-            return (
-                <Splide
-                    hasTrack={false}
-                    options={{
-                        perPage: 3,
-                        rewind: true,
-                        width: "1100px",
-                        height: "400px",
-                        gap: '80px',
-                        arrows: true,
-                        pagination: false,
-                    }}
-                    className="splide justify-center items-center"
-                >
-                    <SplideTrack>
-                        {data.map((item, index) => (
-                            <SplideSlide key={index}>
-                                <MemberCard
-                                    img={require("../Assets/Members/" + item.img)}
-                                    fname={item.fname}
-                                    lname={item.lname}
-                                    major={item.major}
-                                    origin={item.origin}
-                                    position={item.position}
-                                />
-                            </SplideSlide>
-                        ))}
-                    </SplideTrack>
-                </Splide>
-            );
-        }
-        else {
-            return(
-                <MapContainer className="w-[1100px] h-[400px] flex justify-around">
-                    {data.map((item, index) => (  
-                        <MemberCard key={index}
-                            img={require("../Assets/Members/" + item.img)}
-                            fname={item.fname}
-                            lname={item.lname}
-                            major={item.major}
-                            origin={item.origin}
-                            position={item.position}
-                        />
+        const showArrows = data.length > 3;
+        const perPage = data.length < 3 ? data.length : 3;
+        const cardWidth = 320;
+        const gapSize = 20;
+        const splideWidth = (cardWidth * perPage) + (gapSize * (perPage - 1));
+    
+        return (
+            <Splide
+                hasTrack={false}
+                options={{
+                    perPage: perPage,
+                    rewind: true,
+                    width: splideWidth,
+                    height: "500px",
+                    gap: gapSize,
+                    arrows: showArrows,
+                    pagination: false,
+                    drag: data.length > perPage ? true : false,
+                }}
+                className="splide justify-center items-center"
+            >
+                <SplideTrack>
+                    {data.map((item, index) => (
+                        <SplideSlide key={index}>
+                            <StyledMemberCard
+                                img={require("../Assets/Members/" + item.img)}
+                                fname={item.fname}
+                                lname={item.lname}
+                                major={item.major}
+                                origin={item.origin}
+                                position={item.position}
+                            />
+                        </SplideSlide>
                     ))}
-                </MapContainer>
-            )
-        }
+                </SplideTrack>
+            </Splide>
+        );
     };
 
     return(
