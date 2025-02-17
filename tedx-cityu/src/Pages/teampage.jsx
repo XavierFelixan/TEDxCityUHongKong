@@ -18,7 +18,7 @@ import marketingCommunicationData from '../Data/marketingCommunicationData.json'
 const Container = styled.div``
 const ContentWrapper = styled.div`
   display: flex;
-  padding: 20px;
+  padding: 65px;
 `;
 const DepartmentWrapper = styled.div`
   width: 200px;
@@ -83,7 +83,7 @@ export default function TeamPage(){
         const showArrows = data.length > 3;
         const perPage = data.length < 3 ? data.length : 3;
         const cardWidth = 320;
-        const gapSize = 20;
+        const gapSize = 35;
         const splideWidth = (cardWidth * perPage) + (gapSize * (perPage - 1));
     
         return (
