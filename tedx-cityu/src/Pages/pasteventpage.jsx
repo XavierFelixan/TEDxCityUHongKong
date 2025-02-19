@@ -93,7 +93,7 @@ export default function PastEventPage(){
 
     return (
       <>
-      <Banner text={"Past Events"}/>
+      <Banner text1={"PAST"} text2={"EVENTS"}/>
         {eventcards.map((eventcard)=> {
           return(
           <EventCard 

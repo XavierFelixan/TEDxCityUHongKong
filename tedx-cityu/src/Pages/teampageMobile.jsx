@@ -125,7 +125,7 @@ export default function TeamPage() {
     
       return (
         <Container>
-          <Banner text={"The Crew"} />
+          <Banner text1={"OUR"} text2={"CREW"}/>
           <BurgerIcon isOpen={!menuOpen} onClick={toggleMenu} className="p-5">
             <div />
             <div />

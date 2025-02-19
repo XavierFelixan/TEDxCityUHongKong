@@ -116,7 +116,7 @@ export default function TeamPage(){
 
     return(
         <Container>
-            <Banner text={"The Crew"}/>
+            <Banner text1={"OUR"} text2={"CREW"}/>
             <ContentWrapper className="flex items-center py-20 px-14">
                 <DepartmentWrapper className="flex flex-col">
                     <DepartmentTitle className="text-3xl font-bold font-textfont mb-8">

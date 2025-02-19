@@ -17,7 +17,7 @@ const Description = styled.div``;
 export default function AboutPage(){
     return(
         <Container>
-            <Banner text={"About TEDx"}/>
+            <Banner text1={"ABOUT"} text2 = {<span style={{color:"black"}}>TEDX</span>}/>
             <AboutTedx show={true}/>
         </Container>            
     );

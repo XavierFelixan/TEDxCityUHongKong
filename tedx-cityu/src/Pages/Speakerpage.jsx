@@ -20,7 +20,7 @@ export default function Speakerpage(){
     return(
         <Container>
             {/* <Navbar />  */}
-            <Banner text={"Speaker"}/>
+            <Banner text1={"Speaker"}/>
             <Speaker data={FilteredData}/>
             {/* <Footer /> */}
         </Container>            
