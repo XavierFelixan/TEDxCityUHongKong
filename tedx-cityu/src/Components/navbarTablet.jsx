@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import logoWhite from "../Assets/logo-white.png";
+import logoBlack from "../Assets/logo-black.png";
+
 
 // Add a breakpoint for tablet
 const tabletBreakpoint = '1024px';
@@ -14,7 +16,7 @@ const NavbarWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   padding: 16px;
-  background-color: black;
+  background-color: white;
   align-items: center;
 `;
 const LogoWrapper = styled.div`
@@ -31,7 +33,7 @@ const MobileMenu = styled.div`
   display: flex;
   flex-direction: column;
   padding: 8px;
-  background-color: black;
+  background-color: white;
   width: 100%;
   // Only show the mobile menu if the screen size is less than 1024px
   @media (min-width: ${tabletBreakpoint}) {
@@ -39,7 +41,16 @@ const MobileMenu = styled.div`
   }
 `;
 
-const Selection = styled.div``;
+const Selection = styled.div`
+  padding: 5px;
+    text-align: center;
+    transition: all 0.3s ease;
+    &:hover {
+        // color: #FCBA2E;
+        cursor: pointer;
+        background-color: #FF0000;
+    }
+`;
 
 const Logo = styled.img`
   width: 70%;
@@ -65,20 +76,20 @@ export default function Navbar() {
     <Container>
       <NavbarWrapper>
         <LogoWrapper onClick={() => handleNavigate(`/`)}>
-          <Logo src={logoWhite} alt="TEDxCityU" />
+          <Logo src={logoBlack} alt="TEDxCityU" />
         </LogoWrapper>
         <BurgerMenu onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-          <div className="text-white text-center text-5xl">☰</div>
+          <div className="text-black text-center text-5xl">☰</div>
         </BurgerMenu>
       </NavbarWrapper>
       {isMobileMenuOpen && (
         <MobileMenu>
           {Selection_list.map((selection, index) => (
-            <Selection key={index} onClick={() => handleNavigate(selection.url)} className="my-2 text-3xl text-white text-center">
+            <Selection key={index} onClick={() => handleNavigate(selection.url)} className="my-2 text-3xl text-black text-center">
               {selection.label}
             </Selection>
           ))}
-          <Selection className="my-2 text-3xl text-white text-center">
+          <Selection className="my-2 text-3xl text-black text-center">
             <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSfujwCWqpJWzu89hCKiVtBcFli5rVOhqM5uGHtO1AuZEcX6jg/viewform">Registration</a>
           </Selection>
         </MobileMenu>
