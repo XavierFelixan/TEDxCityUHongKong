@@ -20,6 +20,7 @@ const InnerContainer = styled.div`
     height: auto;
     position: absolute;
     left: 5%;
+    bottom: 20%;
 `;
 
 const Text = styled.h1`
