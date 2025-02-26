@@ -56,10 +56,10 @@ const DepartmentWrapper = styled.div`
 
   @media (max-width: ${breakpoints.mobile}) {
     width: 40%;
-   }
- `;
+  }
+`;
 
- const DepartmentTitle = styled.div`
+const DepartmentTitle = styled.div`
   font-size: 1.5rem;
   font-weight: bold;
   margin-bottom: 1rem;
@@ -116,9 +116,10 @@ const DepartmentRadio = styled.input.attrs({
 const CarouselWrapper = styled.div`
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
   justify-items: center;
+  transition: transform 0.5s ease-in-out;
 
   @media (max-width: ${breakpoints.tablet}) {
     grid-template-columns: repeat(2, 1fr);
@@ -131,22 +132,17 @@ const CarouselWrapper = styled.div`
 
 const StyledMemberCard = styled(MemberCard)`
   height: 500px;
-
-  @media (max-width: ${breakpoints.tablet}) {
-    height: 550px;
-  }
 `;
 
 const HamburgerButton = styled.button`
   display: none;
-  background: none;
-  border: none;
   cursor: pointer;
-  position: absolute;
-  left: 0;
 
   @media (max-width: ${breakpoints.tablet}) {
-    display: block;
+    display: ${({ isMenuOpen }) => (isMenuOpen ? 'none' : 'block')};
+    position: absolute;
+    left: 10px;
+    top: 10px;
   }
 `;
 
@@ -164,9 +160,9 @@ const CurrentDepartment = styled.div`
   margin: 10px;
   text-align: center;
   display: flex;
-  align-items: center;
   justify-content: center;
-  position: relative;
+  align-items: center;
+  gap: 10px;
 
   @media (max-width: ${breakpoints.tablet}) {
     font-size: 1.45rem;
@@ -184,10 +180,50 @@ const TitleLine = styled.hr`
   margin: 10px 0;
 `;
 
+const ArrowButton = styled.button`
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  font-size: 1.5rem;
+  line-height: 1.3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: rgba(255, 255, 255, 1);
+    transform: translateY(-50%) scale(1.1);
+  }
+
+  @media (min-width: ${breakpoints.tablet}) {
+    display: block;
+  }
+`;
+
+const LeftArrow = styled(ArrowButton)`
+  left: 10px;
+`;
+
+const RightArrow = styled(ArrowButton)`
+  right: 10px;
+`;
+
 export default function TeamPage() {
   const [Dept, setDept] = useState('Curators');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const departmentWrapperRef = useRef(null);
+  const [currentRow, setCurrentRow] = useState(0);
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1024);
+  const carouselRef = useRef(null);
+  const menuRef = useRef(null);
 
   const list_of_department = {
     "Curators": curatorData,
@@ -200,18 +236,60 @@ export default function TeamPage() {
     "Technical": technicalData
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth > 1024);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
+
   const handleChange = (e) => {
     const department = e.target.value;
     setDept(department);
     setIsMenuOpen(false);
+    setCurrentRow(0);
   };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const scrollLeft = () => {
+    if (currentRow > 0) {
+      setCurrentRow(currentRow - 1);
+    }
+  };
+
+  const scrollRight = () => {
+    const data = list_of_department[Dept] || [];
+    const totalRows = Math.ceil(data.length / 3); 
+    if (currentRow < totalRows - 1) {
+      setCurrentRow(currentRow + 1);
+    }
+  };
+
   const RenderDepartment = (Dept) => {
     let data = list_of_department[Dept] || [];
+
+    if (isDesktop) {
+      const startIndex = currentRow * 3;
+      const endIndex = startIndex + 3;
+      data = data.slice(startIndex, endIndex);
+    }
+
     return (
       <>
         {data.map((item, index) => (
@@ -229,25 +307,11 @@ export default function TeamPage() {
     );
   };
 
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (departmentWrapperRef.current && !departmentWrapperRef.current.contains(event.target) && isMenuOpen) {
-        setIsMenuOpen(false);
-      }
-    };
-
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, [isMenuOpen]);
-
   return (
     <Container>
       <Banner text={"The Crew"} />
       <ContentWrapper>
-        <DepartmentWrapper isOpen={isMenuOpen} ref={departmentWrapperRef}>
+        <DepartmentWrapper isOpen={isMenuOpen} ref={menuRef}>
           <DepartmentTitle>Department</DepartmentTitle>
           <DepartmentList>
             {Object.keys(list_of_department).map((department, index) => (
@@ -269,10 +333,10 @@ export default function TeamPage() {
             ))}
           </DepartmentList>
         </DepartmentWrapper>
-        <div style={{ flex: 1 }}>
+        <div style={{ flex: 1, position: 'relative' }}>
           <CurrentDepartment>
             {window.innerWidth <= 1024 && (
-              <HamburgerButton onClick={toggleMenu}>
+              <HamburgerButton isMenuOpen={isMenuOpen} onClick={toggleMenu}>
                 <HamburgerIcon />
                 <HamburgerIcon />
                 <HamburgerIcon />
@@ -281,9 +345,17 @@ export default function TeamPage() {
             {Dept}
           </CurrentDepartment>
           <TitleLine />
-          <CarouselWrapper>
+          <CarouselWrapper ref={carouselRef}>
             {RenderDepartment(Dept)}
           </CarouselWrapper>
+          {isDesktop && (
+            <>
+              {currentRow > 0 && <LeftArrow onClick={scrollLeft}>&lt;</LeftArrow>}
+              {currentRow < Math.ceil((list_of_department[Dept] || []).length / 3) - 1 && (
+                <RightArrow onClick={scrollRight}>&gt;</RightArrow>
+              )}
+            </>
+          )}
         </div>
       </ContentWrapper>
     </Container>
