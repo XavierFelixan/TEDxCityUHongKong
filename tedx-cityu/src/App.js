@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import TeamPage from "./Pages/teampage";
-import TeamPageMobile from "./Pages/teampageMobile";
-import TeamPageTablet from "./Pages/teampageTablet";
 import AboutPage from "./Pages/aboutpage";
 import HomePage from "./Pages/homepage";
 import PastEventPage from "./Pages/pasteventpage";
@@ -43,12 +41,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
-          <Route
-            path="/crew"
-            element={
-              isMobile ? <TeamPageMobile /> : isTablet ? <TeamPageTablet /> : <TeamPage />
-            }
-          />
+          <Route path="/crew" element={<TeamPage isMobile={isMobile} isTablet={isTablet} />} />
           <Route path="/pastevent" element={<PastEventPage />} />
           <Route path="/speaker/:path" element={<SpeakerPage />} />
           {/* <Route path="/performer/:path" element={<PerformerPage />} /> */}
