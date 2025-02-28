@@ -309,7 +309,7 @@ export default function TeamPage() {
 
     return (
         <Container>
-            <Banner text1={"OUR"} text2={"CREW"}/>
+            <Banner text1={"OUR"} text2={<span style={{color:"black"}}>CREW</span>}/>
             {isMobile ? (
                 <>
                     <MenuHeader>
