@@ -90,7 +90,7 @@ export default function Navbar() {
             </Selection>
           ))}
           <Selection className="my-2 text-3xl text-black text-center">
-            <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/forms/d/e/1FAIpQLSfujwCWqpJWzu89hCKiVtBcFli5rVOhqM5uGHtO1AuZEcX6jg/viewform">Registration</a>
+            <a target="_blank" rel="noopener noreferrer" href="https://forms.gle/C8ZV2JNfhEAnJ1GG9">Registration</a>
           </Selection>
         </MobileMenu>
       )}
