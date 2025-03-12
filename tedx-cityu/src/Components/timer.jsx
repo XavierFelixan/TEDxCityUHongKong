@@ -14,13 +14,13 @@ const Timetext = styled.div``;
 export default function Timer(){
 
     const [Time, setTime] = useState({
-        "Days": 0,
+        "DAYS": 0,
         "Hours": 0,
         "Minutes": 0
     });
 
     useEffect(() => {
-        const target = new Date('2024-04-13T06:30:00Z').getTime();
+        const target = new Date('2025-04-26T06:30:00Z').getTime();
         const now = new Date().getTime();
         const distance = target - now;
         if (distance < 0) {

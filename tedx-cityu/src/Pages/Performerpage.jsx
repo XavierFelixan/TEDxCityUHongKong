@@ -21,7 +21,7 @@ export default function Performerpage(){
     return(
         <Container>
             {/* <Navbar />  */}
-            <Banner text={"Performer"}/>
+            <Banner text1={"Performer"}/>
             <Performer data={FilteredData}/>
             {/* <Footer /> */}
         </Container>            

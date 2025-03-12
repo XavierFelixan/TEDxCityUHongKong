@@ -2,6 +2,7 @@ import {Banner} from "../Components/banner";
 import EventCard from "../Components/eventcard";
 import Footer from "../Components/footer";
 
+import PE2024 from "../Assets/PastEvents/2024.png"
 import PE2023 from "../Assets/PastEvents/2023.png"
 import PE2021 from "../Assets/PastEvents/2021.png"
 import PE2018 from "../Assets/PastEvents/2018.png"
@@ -14,6 +15,21 @@ const ListItems = styled.li``;
 
 export default function PastEventPage(){
   const eventcards = [
+      {
+        img: PE2024,
+        title: "2024: Spill the Tea",
+        desc:'Our theme for the TEDxCityUHongKong 2024 event is “Spill the Tea”. We expect our speakers to share their "secrets" to the audience. The secrets that we are referring may include industry insider insights, or the key to their personal successes. We are giving the speakers a platform to talk about their inspiring achievements in a beneficial way for the audience.',
+        speakers: [
+          { SpeakerList1: "Jeffrey Andrews || Minority Social Worker" },
+          { SpeakerList2:"Lambert Chan || Adjunct Professor, Deputy Programme Leader, City University of Hong Kong" },
+          { SpeakerList3: "Ariel Huang || Musician, Professor" },
+          { SpeakerList4:"Priyanka Jain || Director, Transconsult Pvt. Ltd." },
+          { SpeakerList5: "Londiwe Ngubeni || Singer, Freelancer, Model" },
+          { SpeakerList6: "Kevin Pereira || Managing Director, Blu Artificial Intelligence" },
+          { SpeakerList7: "" },
+          { SpeakerList8: "" },
+        ]
+      },
       {
         img: PE2023,
         title: "2023: Step by Step",
@@ -93,7 +109,7 @@ export default function PastEventPage(){
 
     return (
       <>
-      <Banner text={"Past Events"}/>
+      <Banner text1={"PAST"} text2={<span style={{color:"black"}}>EVENTS</span>}/>
         {eventcards.map((eventcard)=> {
           return(
           <EventCard 
