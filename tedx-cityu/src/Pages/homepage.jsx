@@ -33,7 +33,7 @@ export default function HomePage() {
     // const isTablet = windowWidth >= mobileBreakpoint && windowWidth < tabletBreakpoint;
     return (
         <Container className="min-h-screen w-full">
-            <Banner text={"TEDxCityU Hong Kong 2024"} />
+            <Banner show={false}/>
             <Counter />
             <AboutTedx show={false}/>
             <SpeakerCard />

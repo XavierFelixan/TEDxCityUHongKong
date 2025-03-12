@@ -5,12 +5,19 @@ import LightWave from '../Assets/wave_tedx_red.svg';
 import Background1 from '../Assets/background1.png';
 import Background2 from '../Assets/background2.png';
 import Background3 from '../Assets/background3.JPG';
+import Background4 from '../Assets/MetamorphosisLogo.png';
+import Timer from './timer.jsx';
 
 
 const Container = styled.div``;
-const BannerWrapper = styled.div`
+const BannerWrapper1 = styled.div`
     box-shadow: 0px 6px 4.4px rgba(0, 0, 0, 0.25);
     position: relative;
+`;
+
+const BannerWrapper2 = styled.div`
+    margin: 0 3%;
+    background-color: red;
 `;
 
 const InnerContainer = styled.div`
@@ -52,12 +59,58 @@ const Layout3 = styled.div`
     background-position : center;    
 `;
 
+
+const ImageContainer = styled.div`
+    width: 40%;
+    display:flex;
+    justify-content: center;
+    float: left;
+
+    @media(max-width: 767px){
+        width: 100%;
+    }
+`;
+
+const TitleContainer = styled.div`
+    float: left;
+    width: 60%;
+    // background: red;
+    height: auto;
+    padding-top:3%;
+
+    @media(max-width: 767px){ //mobile view
+        width: 100%;
+        text-align: center;
+    }
+
+    @media(min-width: 768px) and (max-width: 1023px){
+        padding-top: 5%;
+    }
+`;
+
+const TimerBox = styled.div`
+    float:right;
+    background-color: red;
+    display: flex;
+    width: fit-content;
+    height: auto;
+    margin-left: auto;
+    margin-top: 3rem;
+
+    @media(max-width: 1023px){
+        width: 100%;
+        // clear: both;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+`;
+
 const Vector = styled.img.attrs(({ className }) => ({ className }))``;
 
-export const Banner = ({text1,text2}) =>{
+export const Banner = ({text1,text2, show=true}) =>{
     return(
         <Container>
-            <BannerWrapper className="relative flex justify-center items-center min-h-36 md:min-h-[30rem] w-full bg-black">
+            {show && <BannerWrapper1 className="relative flex justify-center items-center min-h-36 md:min-h-[30rem] w-full bg-black">
                 <Layout1 className='absolute top-0 left-0 bg-red w-[40%] h-[50%]'/>
                 <Layout2 className='absolute bottom-0 left-0 bg-red w-[40%] h-[50%]'/>
                 <Layout3 className='absolute top-0 right-0 bg-red w-[60%] h-full'/>
@@ -65,7 +118,26 @@ export const Banner = ({text1,text2}) =>{
                     <Text className="text-white text-4xl md:text-6xl z-10 pb-3">{text1}</Text>
                     <Text className="text-white text-4xl md:text-6xl z-10">{text2}</Text>
                 </InnerContainer>
-            </BannerWrapper>
+            </BannerWrapper1>}
+            
+            {!show && <BannerWrapper2>
+                <ImageContainer>
+                    <img src={Background4} className="w-[80%] mb-10"/>
+                </ImageContainer>
+                <TitleContainer>
+                    <Text className="text-black text-4xl lg:text-6xl z-10 pb-3 lg:text-right md:text-right"><span style={{color:'red'}}>TED</span> X <span style={{color:'red'}}>CITYUHONGKONG</span> 2025</Text>
+                    
+                    <hr className="lg:h-[10px] h-[5px]" style={{color:'red','background-color':'red'}}/>
+                    
+                    <Text className="text-black text-5xl lg:text-6xl z-10 lg:pt-12 pt-5 lg:text-right md:text-right">26TH APRIL 2025</Text>
+                    <Text className="text-red text-4xl lg:text-4xl z-10 lg:text-right pb-10 md:text-right">SATURDAY</Text>
+                </TitleContainer>
+                    <TimerBox className='p-5 flex'>
+                        <Timer/>
+                    </TimerBox>
+            </BannerWrapper2>}
+            
+            
         </Container>
     )
 }
