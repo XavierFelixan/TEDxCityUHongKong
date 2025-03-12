@@ -56,7 +56,7 @@ export default function Navbar() {
                     ))}
                     <Selection
                         className="text-black mx-11 text-base md:text-xl hover:text-yellow-400"
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSfujwCWqpJWzu89hCKiVtBcFli5rVOhqM5uGHtO1AuZEcX6jg/viewform"
+                        href="https://forms.gle/C8ZV2JNfhEAnJ1GG9"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
