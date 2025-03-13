@@ -12,27 +12,6 @@ const Partition = styled.div``;
 const TedxdescWrapper = styled.div``;
 const Tedxdesc = styled.div``;
 
-const Left = styled.div``;
-const Right = styled.div``;
-
-
-const ArtWrapper = styled.div`
-  margin-top: 1.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @media (min-width: 768px) and (max-width: 1023px) { // Tablet view
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-
-  @media (min-width: 1024px) {
-    margin-top: 0;
-  }
-`;
 
 const ArtPic1 = styled.img`
   width: 70%;
@@ -45,7 +24,7 @@ const ArtPic2 = styled.img`
 `;
 
 
-export default function AboutTedx({show = true}){
+
 
 const Left1 = styled.div`
     float:right;
