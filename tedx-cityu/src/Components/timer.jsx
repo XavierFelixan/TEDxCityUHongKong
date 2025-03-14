@@ -19,17 +19,23 @@ const Box = styled.div`
 
 const Timebox = styled.div`
     display: flex;
-    align-items: center;
+    align-items: flex;
     justify-content: center;
     width: 4rem;
     height: 4rem;
 `;
 
 const TimeNumber = styled.div`
+    display: flex-end;
+    justify-content: bottom;
+    align-items: flex-end;
     color: white;
     font-size: 4rem;
     font-weight: bold;
     text-transform: uppercase;
+    @media (max-width: 768px) {
+        font-size: 3rem;
+    }
 `;
 
 const Timetext = styled.div`
@@ -40,7 +46,14 @@ const Timetext = styled.div`
     font-size: 1.2rem;
     font-weight: bold;
     text-transform: uppercase;
-    margin-x: 0.5rem;
+    margin-left: 0.7rem; 
+    margin-right: 0.5rem;
+    @media (max-width: 768px) { 
+        font-size: 1rem;
+        padding-bottom: 0.5rem;
+        margin-left: 0; 
+        margin-right: 0;
+    }
 `;
 
 export default function Timer(){
@@ -103,7 +116,7 @@ export default function Timer(){
                             {value.toString().padStart(2, '0')}
                         </TimeNumber>
                     </Timebox>
-                    <Timetext className="ml-2 mr-2 text-white text-md lg:text-2xl font-medium font-textfont">
+                    <Timetext className="ml-2 mr-2 text-white text-md lg:text-2xl font-medium font-textfont md:ml-0 md:mr-0">
                         {unit}
                     </Timetext>
                   </Box>
