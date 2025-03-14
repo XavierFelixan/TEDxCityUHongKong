@@ -23,6 +23,10 @@ const Timebox = styled.div`
     justify-content: center;
     width: 4rem;
     height: 4rem;
+    @media (max-width: 768px) {
+        width: 3rem;
+        height: 3rem;
+    }
 `;
 
 const TimeNumber = styled.div`
@@ -34,7 +38,7 @@ const TimeNumber = styled.div`
     font-weight: bold;
     text-transform: uppercase;
     @media (max-width: 768px) {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 `;
 
@@ -49,9 +53,9 @@ const Timetext = styled.div`
     margin-left: 0.7rem; 
     margin-right: 0.5rem;
     @media (max-width: 768px) { 
-        font-size: 1rem;
-        padding-bottom: 0.5rem;
-        margin-left: 0; 
+        font-size: 0.8rem;
+        padding-bottom: 0.4rem;
+        margin-left: 0.2rem; 
         margin-right: 0;
     }
 `;
