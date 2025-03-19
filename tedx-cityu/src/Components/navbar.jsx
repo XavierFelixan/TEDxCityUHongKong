@@ -53,7 +53,7 @@ const MobileMenu = styled.div`
 const NavSelectionWrapper = styled.div`
 `;
 
-const Selection = styled.a`
+const Selection = styled(NavLink)`
     padding: 5px;
     text-align: center;
     transition: all 0.3s ease;
@@ -61,6 +61,10 @@ const Selection = styled.a`
         // color: #FCBA2E;
         cursor: pointer;
         background-color: #FF0000;
+    }
+
+    &.active {
+        font-weight: bold;
     }
 `;
 const Logo = styled.img`
@@ -118,11 +122,11 @@ export default function Navbar() {
                             <Selection 
                                 className="text-black mx-11 text-base md:text-xl hover:text-yellow-400"
                                 key={index} 
-                                onClick={() => handleNavigate(selection.url)}>
+                                to={selection.url} activeClassName="active">
                                     {selection.label}
                             </Selection>
                         ))}
-                        <Selection className="text-black mx-11 text-base md:text-xl hover:text-yellow-400">
+                        <Selection className="text-black mx-11 text-base md:text-xl hover:text-yellow-400" as='a'>
                             <a target="_blank" rel="noopener noreferrer" href="https://forms.gle/C8ZV2JNfhEAnJ1GG9">
                                 Registration
                             </a>
@@ -133,11 +137,11 @@ export default function Navbar() {
             {isMobile && isMobileMenuOpen && (
                 <MobileMenu>
                     {Selection_list.map((selection, index) => (
-                        <Selection key={index} onClick={() => handleNavigate(selection.url)} className="my-2 md:text-2xl text-xl text-black text-center">
+                        <Selection key={index} to={selection.url} activeClassName="active" className="my-2 md:text-2xl text-xl text-black text-center">
                             {selection.label}
                         </Selection>
                     ))}
-                    <Selection className="my-2 md:text-2xl text-xl text-black text-center">
+                    <Selection className="my-2 md:text-2xl text-xl text-black text-center" as='a'>
                         <a target="_blank" rel="noopener noreferrer" href="https://forms.gle/C8ZV2JNfhEAnJ1GG9">Registration</a>
                     </Selection>
                 </MobileMenu>
