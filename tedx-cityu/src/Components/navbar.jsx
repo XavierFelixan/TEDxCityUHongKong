@@ -16,7 +16,7 @@ const Container = styled.div`
   }
 `;
 
-const NavbarWrapper = styled.div`
+const NavbarWrapper = styled.div`    
     @media (max-width: ${breakpoints.tablet}px) {
         display: flex;
         justify-content: space-between;
@@ -50,7 +50,8 @@ const MobileMenu = styled.div`
   }
 `;
 
-const NavSelectionWrapper = styled.div``;
+const NavSelectionWrapper = styled.div`
+`;
 
 const Selection = styled.a`
     padding: 5px;
@@ -104,21 +105,24 @@ export default function Navbar() {
                         <Logo src={logoBlack} alt="TEDxCityU" />
                     </LogoWrapper>
                     <BurgerMenu onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-                        <div className="text-black text-center text-5xl">☰</div>
+                        <div className="text-black text-center md:text-5xl text-3xl">☰</div>
                     </BurgerMenu>
                 </NavbarWrapper>
             ) : (
-                <NavbarWrapper>
-                    <LogoWrapper onClick={() => handleNavigate(`/`)}>
+                <NavbarWrapper className="flex justify-between items-center px-8 py-9 bg-white w-full">
+                    <LogoWrapper className="flex items-center justify-center w-96 h-14" onClick={() => handleNavigate(`/`)}>
                         <Logo src={logoBlack} alt="TEDxCityU" />
                     </LogoWrapper>
-                    <NavSelectionWrapper>
+                    <NavSelectionWrapper className="flex items-center justify-around h-14">
                         {Selection_list.map((selection, index) => (
-                            <Selection key={index} onClick={() => handleNavigate(selection.url)}>
-                                {selection.label}
+                            <Selection 
+                                className="text-black mx-11 text-base md:text-xl hover:text-yellow-400"
+                                key={index} 
+                                onClick={() => handleNavigate(selection.url)}>
+                                    {selection.label}
                             </Selection>
                         ))}
-                        <Selection>
+                        <Selection className="text-black mx-11 text-base md:text-xl hover:text-yellow-400">
                             <a target="_blank" rel="noopener noreferrer" href="https://forms.gle/C8ZV2JNfhEAnJ1GG9">
                                 Registration
                             </a>
@@ -129,11 +133,11 @@ export default function Navbar() {
             {isMobile && isMobileMenuOpen && (
                 <MobileMenu>
                     {Selection_list.map((selection, index) => (
-                        <Selection key={index} onClick={() => handleNavigate(selection.url)} className="my-2 text-3xl text-black text-center">
+                        <Selection key={index} onClick={() => handleNavigate(selection.url)} className="my-2 md:text-2xl text-xl text-black text-center">
                             {selection.label}
                         </Selection>
                     ))}
-                    <Selection className="my-2 text-3xl text-black text-center">
+                    <Selection className="my-2 md:text-2xl text-xl text-black text-center">
                         <a target="_blank" rel="noopener noreferrer" href="https://forms.gle/C8ZV2JNfhEAnJ1GG9">Registration</a>
                     </Selection>
                 </MobileMenu>
