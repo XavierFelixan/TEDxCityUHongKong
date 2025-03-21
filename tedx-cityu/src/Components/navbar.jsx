@@ -137,7 +137,7 @@ export default function Navbar() {
             {isMobile && isMobileMenuOpen && (
                 <MobileMenu>
                     {Selection_list.map((selection, index) => (
-                        <Selection key={index} to={selection.url} activeClassName="active" className="my-2 md:text-2xl text-xl text-black text-center">
+                        <Selection key={index} to={selection.url} activeClassName="active" className="my-2 md:text-2xl text-xl text-black text-center" onClick={() => setIsMobileMenuOpen(false)}>
                             {selection.label}
                         </Selection>
                     ))}

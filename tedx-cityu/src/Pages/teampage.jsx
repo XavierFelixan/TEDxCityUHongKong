@@ -55,7 +55,7 @@ const DepartmentWrapper = styled.div`
   }
 
   @media (max-width: ${breakpoints.mobile}px) {
-    width: 40%;
+    width: 45%;
   }
 `;
 
