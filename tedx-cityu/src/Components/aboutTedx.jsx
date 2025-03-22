@@ -4,6 +4,11 @@ import { styled } from "styled-components";
 import PastEvent from "../Assets/PastEvent.png";
 import PastSpeaker from "../Assets/Pastspeaker.png";
 import TEDTeam from "../Assets/TEDxTeam.png";
+import TEDPhotoX from "../Assets/Homepage-Photo.png";
+import XFrame from "../Assets/X-FrameHome.png";
+import ReadMore from "../Assets/ReadMoreText.png";
+import '@fontsource/bayon';
+import '@fontsource/commissioner'
 
 
 const Container = styled.div``;
@@ -65,16 +70,242 @@ const ArtPic = styled.img`
 `;
 
 
+
+const RectShape = styled.div`
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    background-color: #E00028;
+    display: flex;
+    flex-direction: column;
+    height: 105vh;
+    width: 185vh;
+    margin-bottom: 50px;
+    z-index: -1;
+
+    @media (min-width: 768px) and (max-width: 1023px) { // Tablet view
+    width : 95vh;
+    height: 125vh;
+    }
+
+    @media (max-width: 768px){
+    width: 100%;
+    height: 800px;
+    }
+`;
+const TEDPhoto = styled.img`
+    z-index: 1;
+    position: relative;
+    top: -30px;
+    left: -10px;
+    width: 50%;
+
+    @media (min-width: 768px) and (max-width: 1023px) { // Tablet view
+    position: static;
+    margin: 0 auto;
+    width: 100%;
+    }
+
+    @media (max-width: 768px){
+    position: static;
+    margin: 0 auto;
+    width: 100%;
+    }
+    
+`;
+
+const TextIdeas = styled.div`
+    z-index: 1;
+    position: absolute;
+    color: white;
+    top: 160px;
+    left: 770px;
+    font-weight: 700;
+    font-size: 50px;
+
+    @media (min-width: 768px) and (max-width: 1023px) { // Tablet view
+    display: none;
+    }
+`;
+
+const TextEmbark = styled.div`
+    z-index: 1;
+    position: absolute;
+    color: black;
+    top: 230px;
+    left: 770px;
+    font-weight: 700;
+    font-size: 50px;
+
+    @media (min-width: 768px) and (max-width: 1023px) { // Tablet view
+    display: none;
+    }
+
+    @media (max-width: 768px){
+    display: none;
+    }
+`;
+
+const TextPossibilities = styled.div`
+    z-index: 1;
+    position: absolute;
+    color: black;
+    left: 770px;
+    top: 300px;
+    font-weight: 700;
+    font-size: 50px;
+
+    @media (min-width: 768px) and (max-width: 1023px) { // Tablet view
+    display: none;
+    }
+
+    @media (max-width: 768px){
+    display: none;
+    }
+`;
+
+const TEDTitle = styled.div`
+    z-index: 1;
+    position: absolute;
+    left: 770px;
+    top: 390px;
+    font-weight: 800;
+    font-size: 25px;
+    letter-spacing: 10px;
+
+    @media (min-width: 768px) and (max-width: 1023px) { // Tablet view
+    position: relative;
+    left: 0px;
+    right: 0px;
+    top: 10px;
+    }
+
+    @media (max-width: 768px){
+    position: relative;
+    left: 0px;
+    right: 0px;
+    top: 5px;
+    }
+`;
+
+const XFrames = styled.img `
+    position: absolute;
+    z-index: 1;
+    left: 640px;
+    top: 18px;
+
+    @media (min-width: 768px) and (max-width: 1023px) { // Tablet view
+    display: none;
+    }
+
+    @media (max-width: 768px){
+    display: none;
+    }
+`;
+
+const TextHome = styled.div`
+    position: absolute;
+    text-align: start;
+    color: white;
+    font-weight: 600;
+    font-size: 22px;
+    top: 500px;
+    left: 30px;
+    right: 30px;
+
+    @media (min-width: 768px) and (max-width: 1023px) { // Tablet view
+    position: relative;
+    z-index: 1;
+    top: 40px;
+    font-size: 15px;
+    right: 0px;
+    left: 0px;
+    margin: 0 5px;
+    text-align: center;
+    }
+
+    @media (max-width: 768px){
+    position: relative;
+    z-index: 1;
+    top: 30px;
+    font-size: 12px;
+    right: 0px;
+    left: 0px;
+    margin: 0 6px;
+    text-align: center;
+    }
+`;
+
+const ReadMoreText = styled.img`
+    position: absolute;
+    top: 700px;
+    width: 12%;
+    left: 30px;
+
+    @media (min-width: 768px) and (max-width: 1023px) { // Tablet view
+    position: relative;
+    width: 15%;
+    top: 90px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    }
+
+    @media (max-width: 768px){
+    position: relative;
+    width: 15%;
+    top: 70px;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    }
+    
+`;
+
+const TitleResp = styled.div`
+    display: none;
+
+    @media (min-width: 768px) and (max-width: 1023px) { // Tablet view
+    display: inline-block;
+    font-size: 40px;
+    color: white;
+    letter-spacing: 0.1em;
+    }
+
+    @media (max-width: 768px){
+    display: inline-block;
+    font-size: 40px;
+    color: white;
+    letter-spacing: 0.1em;
+    }
+`;
+
 export default function AboutTedx({show = true}){
 
     return(
         <Container className="flex justify-center w-[100%] font-textfond">
             <ContentWrapper className="flex flex-col justify-center">
-                {!show && <Partition className="flex justify-center items-center min-w-full min-h-[400px] mb-5 bg-cover bg-no-repeat text-white text-7xl font-semibold font-textfont text-center md:text-left " style={{ backgroundImage: `url(${PastEvent})` }}>
-                    What is TEDx
-                </Partition>}
+                {/* {!show && <Partition className="flex justify-center items-center min-w-full min-h-[400px] mb-5 bg-cover bg-no-repeat text-white text-7xl font-semibold font-textfont text-center md:text-left " style={{ backgroundImage: `url(${PastEvent})` }}>
+                    What is TED
+                </Partition>} */}
+
+                <RectShape>
+                    <TEDPhoto src={TEDPhotoX}></TEDPhoto>
+                    <XFrames src={XFrame}/>
+                    <TitleResp style={{ fontFamily: 'Bayon, sans-serif'}}>IDEAS EMBARK POSSIBILITIES</TitleResp>
+                    <TextIdeas style={{ fontFamily: 'Bayon, sans-serif'}}>IDEAS</TextIdeas>
+                    <TextEmbark style={{ fontFamily: 'Bayon, sans-serif'}}>EMBARK</TextEmbark>
+                    <TextPossibilities style={{ fontFamily: 'Bayon, sans-serif'}}>POSSIBILITIES</TextPossibilities>
+                    <TEDTitle style={{ fontFamily: 'Bayon, sans-serif'}}>TED<span className="text-white" style={{ fontFamily: 'Bayon, sans-serif'}}>X</span>CITYUHONGKONG</TEDTitle>
+                    <TextHome style={{ fontFamily: 'Commissioner, sans-serif'}}>In the spirit of ideas worth spreading, <span className="text-black font-bold" >TED</span> has created a program called <span className="text-black font-bold" >TEDx</span>. 
+                    <span className="text-black font-bold" > TEDx</span> is a program of local, self-organized events that bring people together to share a <span className="text-black font-bold" >TED</span>-like experience. Our event is called <span className="text-black font-bold" >TEDx</span><span className="font-bold">CityUHongKong 2025</span>, where x = independently organized  <span className="text-black font-bold" >TED</span> event. At our <span className="text-black font-bold" >TEDx</span><span className="font-bold">CityUHongKong 2025</span> event, 
+                    <span className="text-black font-bold" >TED</span> Talks video and live speakers will combine to spark deep discussion and connection in a small group. The <span className="text-black font-bold" >TED</span> Conference provides general guidance for the <span className="text-black font-bold" >TED</span> program, but individual <span className="text-black font-bold" >TEDx</span> events, including ours, are self-organized.</TextHome>
+                    <ReadMoreText src={ReadMore}/>
+                </RectShape>
+                
+
                 <TedxdescWrapper className="flex justify-center mx-5 md:mx-20 ">
-                    {!show && <Tedxdesc className="text-xl md:my-5">
+                    {/* {!show && <Tedxdesc className="text-xl md:my-5">
                         In the spirit of ideas worth spreading, <span className="text-red font-bold font-textfont">TED</span> has created a program called <span className="text-red font-bold">TEDx</span>.
                         <span className="text-red font-bold"> TEDx</span> is a program of local, self-organized events that bring people together to share a <span className="text-red font-bold">TED</span>-like experience. 
                         Our event is called <span className="text-red font-bold">TEDx</span><span className="font-bold">CityUHongKong 2024</span>, 
@@ -83,7 +314,8 @@ export default function AboutTedx({show = true}){
                         <span className="text-red font-bold"> TED</span> Talks video and live speakers will combine to spark deep discussion and connection in a small group. 
                         The <span className="text-red font-bold">TED</span> Conference provides general guidance for the 
                         <span className="text-red font-bold"> TEDx</span> program, but individual <span className="text-red font-bold">TEDx</span> events, including ours, are self-organized.
-                    </Tedxdesc>}
+                    </Tedxdesc>} */}
+                    
                     
                     {show && <Tedxdesc className="my-5 md:my-12 className=text-lg">
                         <Container>
