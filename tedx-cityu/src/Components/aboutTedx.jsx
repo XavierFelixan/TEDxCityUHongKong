@@ -79,7 +79,7 @@ const RectShape = styled.div`
     display: flex;
     flex-direction: column;
     height: 62rem;
-    width: 72rem;
+    width: 65rem;
     margin-bottom: 5rem;
     z-index: -1;
 
@@ -119,7 +119,7 @@ const TextIdeas = styled.div`
     position: absolute;
     color: white;
     top: 7rem;
-    left: 42rem;
+    left: 40rem;
     font-weight: 700;
     font-size: 50px;
 
@@ -137,7 +137,7 @@ const TextEmbark = styled.div`
     position: absolute;
     color: black;
     top: 11rem;
-    left: 42rem;
+    left: 40rem;
     font-weight: 700;
     font-size: 50px;
 
@@ -154,7 +154,7 @@ const TextPossibilities = styled.div`
     z-index: 1;
     position: absolute;
     color: black;
-    left: 42rem;
+    left: 40rem;
     top: 15rem;
     font-weight: 700;
     font-size: 50px;
@@ -171,7 +171,7 @@ const TextPossibilities = styled.div`
 const TEDTitle = styled.div`
     z-index: 1;
     position: absolute;
-    left: 42rem;
+    left: 40rem;
     top: 22rem;
     font-weight: 800;
     font-size: 25px;
@@ -195,7 +195,7 @@ const TEDTitle = styled.div`
 const XFrames = styled.img `
     position: absolute;
     z-index: 1;
-    left: 36.5rem;
+    left: 32.5rem;
     top: 1.2rem;
 
     @media (min-width: 768px) and (max-width: 1023px) { // Tablet view
@@ -239,7 +239,7 @@ const TextHome = styled.div`
 
 const ReadMoreText = styled.img`
     position: absolute;
-    top: 50rem;
+    top: 51rem;
     width: 15%;
     left: 3.5rem;
 
