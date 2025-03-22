@@ -78,14 +78,14 @@ const RectShape = styled.div`
     background-color: #E00028;
     display: flex;
     flex-direction: column;
-    height: 105vh;
-    width: 185vh;
-    margin-bottom: 50px;
+    height: 65rem;
+    width: 70rem;
+    margin-bottom: 5rem;
     z-index: -1;
 
     @media (min-width: 768px) and (max-width: 1023px) { // Tablet view
-    width : 95vh;
-    height: 125vh;
+    width : 50rem;
+    height: 60rem;
     }
 
     @media (max-width: 768px){
@@ -96,9 +96,9 @@ const RectShape = styled.div`
 const TEDPhoto = styled.img`
     z-index: 1;
     position: relative;
-    top: -30px;
-    left: -10px;
-    width: 50%;
+    top: -1.5rem;
+    left: -0.5rem;
+    width: 55%;
 
     @media (min-width: 768px) and (max-width: 1023px) { // Tablet view
     position: static;
@@ -118,12 +118,16 @@ const TextIdeas = styled.div`
     z-index: 1;
     position: absolute;
     color: white;
-    top: 160px;
-    left: 770px;
+    top: 7rem;
+    left: 40rem;
     font-weight: 700;
     font-size: 50px;
 
     @media (min-width: 768px) and (max-width: 1023px) { // Tablet view
+    display: none;
+    }
+
+    @media (max-width: 768px){
     display: none;
     }
 `;
@@ -132,8 +136,8 @@ const TextEmbark = styled.div`
     z-index: 1;
     position: absolute;
     color: black;
-    top: 230px;
-    left: 770px;
+    top: 11rem;
+    left: 40rem;
     font-weight: 700;
     font-size: 50px;
 
@@ -150,8 +154,8 @@ const TextPossibilities = styled.div`
     z-index: 1;
     position: absolute;
     color: black;
-    left: 770px;
-    top: 300px;
+    left: 40rem;
+    top: 15rem;
     font-weight: 700;
     font-size: 50px;
 
@@ -167,8 +171,8 @@ const TextPossibilities = styled.div`
 const TEDTitle = styled.div`
     z-index: 1;
     position: absolute;
-    left: 770px;
-    top: 390px;
+    left: 40rem;
+    top: 20rem;
     font-weight: 800;
     font-size: 25px;
     letter-spacing: 10px;
@@ -177,22 +181,22 @@ const TEDTitle = styled.div`
     position: relative;
     left: 0px;
     right: 0px;
-    top: 10px;
+    top: 0.5rem;
     }
 
     @media (max-width: 768px){
     position: relative;
     left: 0px;
     right: 0px;
-    top: 5px;
+    top: 0.2rem;
     }
 `;
 
 const XFrames = styled.img `
     position: absolute;
     z-index: 1;
-    left: 640px;
-    top: 18px;
+    left: 35rem;
+    top: 1.2rem;
 
     @media (min-width: 768px) and (max-width: 1023px) { // Tablet view
     display: none;
@@ -209,25 +213,22 @@ const TextHome = styled.div`
     color: white;
     font-weight: 600;
     font-size: 22px;
-    top: 500px;
-    left: 30px;
-    right: 30px;
+    top: 28rem;
+    margin-left: 3rem;
+    margin-right: 3rem;
 
     @media (min-width: 768px) and (max-width: 1023px) { // Tablet view
     position: relative;
     z-index: 1;
-    top: 40px;
+    top: 2rem;
     font-size: 15px;
-    right: 0px;
-    left: 0px;
-    margin: 0 5px;
     text-align: center;
     }
 
     @media (max-width: 768px){
     position: relative;
     z-index: 1;
-    top: 30px;
+    top: 2rem;
     font-size: 12px;
     right: 0px;
     left: 0px;
@@ -238,14 +239,14 @@ const TextHome = styled.div`
 
 const ReadMoreText = styled.img`
     position: absolute;
-    top: 700px;
-    width: 12%;
-    left: 30px;
+    top: 45rem;
+    width: 15%;
+    left: 3.5rem;
 
     @media (min-width: 768px) and (max-width: 1023px) { // Tablet view
     position: relative;
     width: 15%;
-    top: 90px;
+    top: 8rem;
     left: 0px;
     right: 0px;
     margin: 0 auto;
@@ -253,8 +254,8 @@ const ReadMoreText = styled.img`
 
     @media (max-width: 768px){
     position: relative;
-    width: 15%;
-    top: 70px;
+    width: 18%;
+    top: 3.9rem;
     left: 0px;
     right: 0px;
     margin: 0 auto;
