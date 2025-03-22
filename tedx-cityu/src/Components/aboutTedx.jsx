@@ -78,8 +78,8 @@ const RectShape = styled.div`
     background-color: #E00028;
     display: flex;
     flex-direction: column;
-    height: 65rem;
-    width: 92rem;
+    height: 62rem;
+    width: 89rem;
     margin-bottom: 5rem;
     z-index: -1;
 
@@ -195,7 +195,7 @@ const TEDTitle = styled.div`
 const XFrames = styled.img `
     position: absolute;
     z-index: 1;
-    left: 47.5rem;
+    left: 46rem;
     top: 1.2rem;
 
     @media (min-width: 768px) and (max-width: 1023px) { // Tablet view
