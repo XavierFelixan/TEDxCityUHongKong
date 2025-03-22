@@ -5,31 +5,31 @@ import logoWhite from "../Assets/logo-white.png";
 import logoBlack from "../Assets/logo-black.png";
 
 const breakpoints = {
-    tablet: 1024,
-    mobile: 768,
+  tablet: 1024,
+  mobile: 768,
 };
 
 const Container = styled.div`
-    @media (max-width: ${breakpoints.tablet}px) {
-        display: flex;
-        flex-direction: column;
+  @media (max-width: ${breakpoints.tablet}px) {
+    display: flex;
+    flex-direction: column;
   }
 `;
 
-const NavbarWrapper = styled.div`    
-    @media (max-width: ${breakpoints.tablet}px) {
-        display: flex;
-        justify-content: space-between;
-        padding: 16px;
-        background-color: white;
-        align-items: center;
+const NavbarWrapper = styled.div`
+  @media (max-width: ${breakpoints.tablet}px) {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: white;
+    align-items: center;
   }
 `;
 
 const LogoWrapper = styled.a`
-    &:hover {
-        cursor: pointer;
-    }
+  &:hover {
+    cursor: pointer;
+  }
 `;
 
 const BurgerMenu = styled.div`
@@ -50,102 +50,160 @@ const MobileMenu = styled.div`
   }
 `;
 
-const NavSelectionWrapper = styled.div`
-`;
+const NavSelectionWrapper = styled.div``;
 
 const Selection = styled(NavLink)`
-    padding: 5px;
-    text-align: center;
-    transition: all 0.3s ease;
-    &:hover {
-        // color: #FCBA2E;
-        cursor: pointer;
-        background-color: #FF0000;
-    }
+  padding: 5px;
+  text-align: center;
+  transition: all 0.3s ease;
+  &:hover {
+    // color: #FCBA2E;
+    cursor: pointer;
+    animation: myAnim 3s ease 0s 1 normal forwards;
+    color: red;
+    font-weight:600;
 
-    &.active {
-        font-weight: bold;
+    @keyframes myAnim {
+      0% {
+        animation-timing-function: ease-out;
+        transform: scale(1);
+        transform-origin: center center;
+      }
+
+      10% {
+        animation-timing-function: ease-in;
+        transform: scale(0.91);
+      }
+
+      17% {
+        animation-timing-function: ease-out;
+        transform: scale(0.98);
+      }
+
+      33% {
+        animation-timing-function: ease-in;
+        transform: scale(0.87);
+      }
+
+      45% {
+        animation-timing-function: ease-out;
+        transform: scale(1);
+      }
     }
+  }
+
+  &.active {
+    font-weight: bold;
+  }
 `;
 const Logo = styled.img`
-    @media (max-width: ${breakpoints.tablet}px) {
-        width: 70%;
-        height: auto;
-    }
+  @media (max-width: ${breakpoints.tablet}px) {
+    width: 70%;
+    height: auto;
+  }
 `;
 
 export default function Navbar() {
-    const [isMobile, setIsMobile] = useState(window.innerWidth <= breakpoints.tablet);
-    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-    const Selection_list = [
-        { label: 'About', url: '/about' },
-        // { label: 'Sponsors', url: '/sponsor' },
-        { label: 'Crew', url: '/crew' },
-        { label: 'Past Events', url: '/pastevent' }
-    ];
-    const navigate = useNavigate();
+  const [isMobile, setIsMobile] = useState(
+    window.innerWidth <= breakpoints.tablet
+  );
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const Selection_list = [
+    { label: "About", url: "/about" },
+    // { label: 'Sponsors', url: '/sponsor' },
+    { label: "Crew", url: "/crew" },
+    { label: "Past Events", url: "/pastevent" },
+  ];
+  const navigate = useNavigate();
 
-    const handleNavigate = (path) => {
-        navigate(path);
-        setIsMobileMenuOpen(false);
+  const handleNavigate = (path) => {
+    navigate(path);
+    setIsMobileMenuOpen(false);
+  };
+
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= breakpoints.tablet);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
     };
+  }, []);
 
-    const handleResize = () => {
-            setIsMobile(window.innerWidth <= breakpoints.tablet);
-        }
-    
-        useEffect(() => {
-            window.addEventListener('resize', handleResize);
-            return () => {
-                window.removeEventListener('resize', handleResize);
-            }
-        }, []);
-
-    return (
-        <Container>
-            {isMobile ? (
-                <NavbarWrapper>
-                    <LogoWrapper onClick={() => handleNavigate(`/`)}>
-                        <Logo src={logoBlack} alt="TEDxCityU" />
-                    </LogoWrapper>
-                    <BurgerMenu onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
-                        <div className="text-black text-center md:text-5xl text-3xl">☰</div>
-                    </BurgerMenu>
-                </NavbarWrapper>
-            ) : (
-                <NavbarWrapper className="flex justify-between items-center px-8 py-9 bg-white w-full">
-                    <LogoWrapper className="flex items-center justify-center w-96 h-14" onClick={() => handleNavigate(`/`)}>
-                        <Logo src={logoBlack} alt="TEDxCityU" />
-                    </LogoWrapper>
-                    <NavSelectionWrapper className="flex items-center justify-around h-14">
-                        {Selection_list.map((selection, index) => (
-                            <Selection 
-                                className="text-black mx-11 text-base md:text-xl hover:text-yellow-400"
-                                key={index} 
-                                to={selection.url} activeClassName="active">
-                                    {selection.label}
-                            </Selection>
-                        ))}
-                        <Selection className="text-black mx-11 text-base md:text-xl hover:text-yellow-400" as='a'>
-                            <a target="_blank" rel="noopener noreferrer" href="https://forms.gle/C8ZV2JNfhEAnJ1GG9">
-                                Registration
-                            </a>
-                        </Selection>
-                    </NavSelectionWrapper>
-                </NavbarWrapper>
-            )}
-            {isMobile && isMobileMenuOpen && (
-                <MobileMenu>
-                    {Selection_list.map((selection, index) => (
-                        <Selection key={index} to={selection.url} activeClassName="active" className="my-2 md:text-2xl text-xl text-black text-center" onClick={() => setIsMobileMenuOpen(false)}>
-                            {selection.label}
-                        </Selection>
-                    ))}
-                    <Selection className="my-2 md:text-2xl text-xl text-black text-center" as='a'>
-                        <a target="_blank" rel="noopener noreferrer" href="https://forms.gle/C8ZV2JNfhEAnJ1GG9">Registration</a>
-                    </Selection>
-                </MobileMenu>
-            )}
-        </Container>
-    );
+  return (
+    <Container>
+      {isMobile ? (
+        <NavbarWrapper>
+          <LogoWrapper onClick={() => handleNavigate(`/`)}>
+            <Logo src={logoBlack} alt="TEDxCityU" />
+          </LogoWrapper>
+          <BurgerMenu onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+            <div className="text-black text-center md:text-5xl text-3xl">☰</div>
+          </BurgerMenu>
+        </NavbarWrapper>
+      ) : (
+        <NavbarWrapper className="flex justify-between items-center px-8 py-9 bg-white w-full">
+          <LogoWrapper
+            className="flex items-center justify-center w-96 h-14"
+            onClick={() => handleNavigate(`/`)}
+          >
+            <Logo src={logoBlack} alt="TEDxCityU" />
+          </LogoWrapper>
+          <NavSelectionWrapper className="flex items-center justify-around h-14">
+            {Selection_list.map((selection, index) => (
+              <Selection
+                className="text-black mx-11 text-base md:text-xl hover:text-yellow-400"
+                key={index}
+                to={selection.url}
+                activeClassName="active"
+              >
+                {selection.label}
+              </Selection>
+            ))}
+            <Selection
+              className="text-black mx-11 text-base md:text-xl hover:text-yellow-400"
+              as="a"
+            >
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://forms.gle/C8ZV2JNfhEAnJ1GG9"
+              >
+                Registration
+              </a>
+            </Selection>
+          </NavSelectionWrapper>
+        </NavbarWrapper>
+      )}
+      {isMobile && isMobileMenuOpen && (
+        <MobileMenu>
+          {Selection_list.map((selection, index) => (
+            <Selection
+              key={index}
+              to={selection.url}
+              activeClassName="active"
+              className="my-2 md:text-2xl text-xl text-black text-center"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              {selection.label}
+            </Selection>
+          ))}
+          <Selection
+            className="my-2 md:text-2xl text-xl text-black text-center"
+            as="a"
+          >
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://forms.gle/C8ZV2JNfhEAnJ1GG9"
+            >
+              Registration
+            </a>
+          </Selection>
+        </MobileMenu>
+      )}
+    </Container>
+  );
 }
