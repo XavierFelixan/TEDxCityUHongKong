@@ -62,6 +62,7 @@ const Selection = styled(NavLink)`
     animation: myAnim 3s ease 0s 1 normal forwards;
     color: red;
     font-weight:600;
+    font-size: 98%;
 
     @keyframes myAnim {
       0% {
@@ -94,6 +95,10 @@ const Selection = styled(NavLink)`
 
   &.active {
     font-weight: bold;
+    background-color: red;
+    color: white;
+    border-radius: 5rem;
+    padding: 1rem;
   }
 `;
 const Logo = styled.img`
