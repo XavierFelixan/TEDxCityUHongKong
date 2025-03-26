@@ -18,6 +18,19 @@ const TedxdescWrapper = styled.div``;
 const Tedxdesc = styled.div``;
 
 
+const ArtPic1 = styled.img`
+  width: 70%;
+  height: auto;
+`;
+
+const ArtPic2 = styled.img`
+  width: 100%;
+  height: auto;
+`;
+
+
+
+
 const Left1 = styled.div`
     float:right;
     width:50%;
