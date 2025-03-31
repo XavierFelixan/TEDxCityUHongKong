@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import { Banner } from "../Components/banner";
 import Navbar from "../Components/navbar";
-import MobileNavbar from "../Components/navbarMobile";
 import Footer from "../Components/footer";
 import Counter from "../Components/Counter";
 import AboutTedx from "../Components/aboutTedx";
@@ -33,7 +32,7 @@ export default function HomePage() {
     // const isTablet = windowWidth >= mobileBreakpoint && windowWidth < tabletBreakpoint;
     return (
         <Container className="min-h-screen w-full">
-            <Banner text={"TEDxCityU Hong Kong 2024"} />
+            <Banner show={false}/>
             <Counter />
             <AboutTedx show={false}/>
             <SpeakerCard />

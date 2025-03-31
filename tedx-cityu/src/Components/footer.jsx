@@ -25,7 +25,7 @@ export default function Footer() {
     const Link = ["https://www.instagram.com/tedxcityuhongkong/", "https://www.linkedin.com/company/tedxcityuhongkong/", "https://www.facebook.com/TEDxCityUHK/","https://www.youtube.com/@TEDx"]
     return (
         <Container>
-            <FollowUs className="text-center md:text-7xl text-5xl top-1 relative md:top-2">FOLLOW US!</FollowUs>
+            <FollowUs className="text-center md:text-7xl text-5xl top-1 relative md:top-2 mb-2">FOLLOW US!</FollowUs>
             <FooterContainer className="items-center h-24 w-full bg-black px-5 md:px-12 py-5">
                 { <SocialMediaWrapper className="flex justify-center items-center font-textfont text-white">
                     {Social_media_logo.map((logo, index) => (

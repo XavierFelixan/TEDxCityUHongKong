@@ -39,9 +39,9 @@ const Speaker = ({data}) =>{
                         <DescriptionWrapper className="mx-5 md:mx-0 text-justify text-lg mt-3 md:mt-4 md:mr-36">
                             {item.desc}
                         </DescriptionWrapper>
-                        <DescriptionWrapper className="mx-5 md:mx-0 text-lg my-5 md:mt-4 md:mr-36">
+                        {/* <DescriptionWrapper className="mx-5 md:mx-0 text-lg my-5 md:mt-4 md:mr-36">
                             {item.link && <SpeakerLink target="_blank" href={item.link}>{item.link}</SpeakerLink>}
-                        </DescriptionWrapper>
+                        </DescriptionWrapper> */}
                     </Wrapper>
                 </Wrapper>
             ))}

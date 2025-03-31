@@ -30,15 +30,7 @@
         "major": "Year 4, English",
         "origin": "India",
         "position": "Event Management and Procurement Manager"
-    },
-    {
-        "img": "Event Management/Adilkhan.jpg",
-        "fname": "Adilkhan",
-        "lname": "Orakbay",
-        "major": "Year 2, Computer Science",
-        "origin": "Kazakhstan",
-        "position": "Event Management and Procurement Manager"
-    },    
+    },   
     {
         "img": "Event Management/Rian.jpg",
         "fname": "Rian",
@@ -56,7 +48,7 @@
         "position": "Event Management and Procurement Manager"
     },
     {
-        "img": "Event Management/Joanne.jpg",
+        "img": "Event Management/Joanne.jpeg",
         "fname": "Joanne Trinity",
         "lname": "Setiawan",
         "major": "Year 1, Chemistry",

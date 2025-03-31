@@ -6,8 +6,6 @@ import AboutPage from "./Pages/aboutpage";
 import HomePage from "./Pages/homepage";
 import PastEventPage from "./Pages/pasteventpage";
 import Navbar from "./Components/navbar";
-import MobileNavbar from "./Components/navbarMobile";
-import TabletNavbar from "./Components/navbarTablet";
 import Footer from "./Components/footer";
 import SpeakerPage from "./Pages/Speakerpage";
 import PerformerPage from "./Pages/Performerpage";
@@ -37,7 +35,7 @@ function App() {
   return (
     <Container>
       <BrowserRouter>
-        {isMobile ? <MobileNavbar /> : isTablet ? <TabletNavbar /> : <Navbar />}
+        {isMobile ? <Navbar /> : isTablet ? <Navbar /> : <Navbar />}
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
