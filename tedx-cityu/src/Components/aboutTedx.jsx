@@ -91,19 +91,23 @@ const RectShape = styled.div`
     background-color: #E00028;
     display: flex;
     flex-direction: column;
-    height: 62rem;
+    height: 50rem;
     width: 65rem;
     margin-bottom: 5rem;
     z-index: -1;
 
-    @media (min-width: 768px) and (max-width: 1023px) { // Tablet view
+    @media (min-width: 769px) and (max-width: 1023px) { // Tablet view
     width : 50rem;
     height: 60rem;
     }
 
     @media (max-width: 768px){
     width: 100%;
-    height: 800px;
+    height: 50rem;
+    }
+
+    @media (max-width: 450px){
+        height: 45rem;
     }
 `;
 const TEDPhoto = styled.img`
@@ -226,7 +230,7 @@ const TextHome = styled.div`
     color: white;
     font-weight: 600;
     font-size: 22px;
-    top: 35rem;
+    top: 26rem;
     margin-left: 3rem;
     margin-right: 3rem;
 
@@ -252,7 +256,7 @@ const TextHome = styled.div`
 
 const ReadMoreText = styled.img`
     position: absolute;
-    top: 51rem;
+    top: 43rem;
     width: 15%;
     left: 3.5rem;
 
