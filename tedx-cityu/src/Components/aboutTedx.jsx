@@ -303,7 +303,8 @@ export default function AboutTedx({show = true}){
                     What is TED
                 </Partition>} */}
 
-                <RectShape>
+                
+                {!show &&<RectShape>
                     <TEDPhoto src={TEDPhotoX}></TEDPhoto>
                     <XFrames src={XFrame}/>
                     <TitleResp style={{ fontFamily: 'Bayon, sans-serif'}}>IDEAS EMBARK POSSIBILITIES</TitleResp>
@@ -315,7 +316,7 @@ export default function AboutTedx({show = true}){
                     <span className="text-black font-bold" > TEDx</span> is a program of local, self-organized events that bring people together to share a <span className="text-black font-bold" >TED</span>-like experience. Our event is called <span className="text-black font-bold" >TEDx</span><span className="font-bold">CityUHongKong 2025</span>, where x = independently organized  <span className="text-black font-bold" >TED</span> event. At our <span className="text-black font-bold" >TEDx</span><span className="font-bold">CityUHongKong 2025</span> event, 
                     <span className="text-black font-bold" >TED</span> Talks video and live speakers will combine to spark deep discussion and connection in a small group. The <span className="text-black font-bold" >TED</span> Conference provides general guidance for the <span className="text-black font-bold" >TED</span> program, but individual <span className="text-black font-bold" >TEDx</span> events, including ours, are self-organized.</TextHome>
                     <ReadMoreText src={ReadMore}/>
-                </RectShape>
+                </RectShape>}
                 
 
                 <TedxdescWrapper className="flex justify-center mx-5 md:mx-20 ">
