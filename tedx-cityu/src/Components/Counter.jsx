@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useRef, useState, useEffect} from "react";
 import {styled} from "styled-components";
 import Timer from "./timer";
 import Butterfly from "../Assets/MetamorphosisLogo2.png";
@@ -122,26 +122,74 @@ const Register = styled.div`
   padding-right: 3rem;
 `;
 
-export default function Counter() {
-  return (
-    <Container className="flex justify-center w-full">
-      <Wrapper className="md:mx-8">
-        <Left className="w-full md:w-1/2">
-        <TitleText className="text-black text-4xl md:text-6xl z-10 pb-0 text-right text-red lg:p-9 p-8">2025 THEME</TitleText>
-        <DescriptionWrapper className="w-full font-textfont md:text-2xl">
-          Our theme for the TEDxCityUHongKong 2024 event is “Metamorphosis”. We expect our speakers to share their "secrets" to the audience. 
-          The secrets that we are referring may include industry insider insights, or the key to their personal successes. 
-          We are giving the speakers a platform to talk about their inspiring achievements in a beneficial way for the audience.
-        </DescriptionWrapper>
-        <Register className="md:text-3xl text-2xl"><span style={{border:'5px solid','font-weight':'bold','padding':'0 5px'}}>REGISTER NOW!</span></Register>
-        </Left>
+const SlideInContainer = styled.div`
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 3s ease-in-out, transform 3s ease-in-out;
+  margin-bottom: 10%;
 
-        <Right className="w-full md:w-1/2">
-          <ArtWrapper>
-            <ArtPic src={Butterfly} alt="TEDxCityUHongKong 2025 Metamorphosis" className="mx-auto w-[60%] h-[60%]"/>
-          </ArtWrapper>
-        </Right>
-      </Wrapper>
+  @media (max-width: 1023px){
+    margin-top: 40%;
+  }
+
+  &.slide-in {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
+
+
+export default function Counter() {
+  const counterRef = useRef(null); // Ref for the Counter component
+  const [isVisible, setIsVisible] = useState(false); // State to track visibility
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true); // Set visible when in view
+          observer.unobserve(entry.target); // Stop observing after animation
+        }
+      },
+      {
+        root: null, // Use the viewport as the root
+        rootMargin: "0px",
+        threshold: 0.5, // Trigger when 50% of the element is visible
+      }
+    );
+
+    if (counterRef.current) {
+      observer.observe(counterRef.current); // Start observing
+    }
+
+    return () => {
+      if (counterRef.current) {
+        observer.unobserve(counterRef.current); // Cleanup observer
+      }
+    };
+  }, []);
+
+  return (
+    <Container className="flex justify-center w-full" ref={counterRef}>
+      <SlideInContainer className={isVisible ? "slide-in" : ""}>
+        <Wrapper className="md:mx-8">
+          <Left className="w-full md:w-1/2">
+          <TitleText className="text-black text-4xl md:text-6xl z-10 pb-0 text-right text-red lg:p-9 p-8">2025 THEME</TitleText>
+          <DescriptionWrapper className="w-full font-textfont md:text-2xl">
+            Our theme for the TEDxCityUHongKong 2024 event is “Metamorphosis”. We expect our speakers to share their "secrets" to the audience. 
+            The secrets that we are referring may include industry insider insights, or the key to their personal successes. 
+            We are giving the speakers a platform to talk about their inspiring achievements in a beneficial way for the audience.
+          </DescriptionWrapper>
+          <Register className="md:text-3xl text-2xl"><span style={{border:'5px solid','font-weight':'bold','padding':'0 5px'}}>REGISTER NOW!</span></Register>
+          </Left>
+
+          <Right className="w-full md:w-1/2">
+            <ArtWrapper>
+              <ArtPic src={Butterfly} alt="TEDxCityUHongKong 2025 Metamorphosis" className="mx-auto w-[60%] h-[60%]"/>
+            </ArtWrapper>
+          </Right>
+        </Wrapper>
+      </SlideInContainer>
     </Container>
   );
 }

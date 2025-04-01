@@ -312,8 +312,24 @@ export default function AboutTedx({show = true}){
                 {/* {!show && <Partition className="flex justify-center items-center min-w-full min-h-[400px] mb-5 bg-cover bg-no-repeat text-white text-7xl font-semibold font-textfont text-center md:text-left " style={{ backgroundImage: `url(${PastEvent})` }}>
                     What is TED
                 </Partition>} */}
-
-                <RectShape>
+                {!show &&<RectShape>
+                    <TEDPhoto src={TEDPhotoX}></TEDPhoto>
+                    <XFrames src={XFrame}/>
+                    <TitleResp style={{ fontFamily: 'Bayon, sans-serif'}}>IDEAS EMBARK POSSIBILITIES</TitleResp>
+                    <TextIdeas style={{ fontFamily: 'Bayon, sans-serif'}}>IDEAS</TextIdeas>
+                    <TextEmbark style={{ fontFamily: 'Bayon, sans-serif'}}>EMBARK</TextEmbark>
+                    <TextPossibilities style={{ fontFamily: 'Bayon, sans-serif'}}>POSSIBILITIES</TextPossibilities>
+                    <TEDTitle style={{ fontFamily: 'Bayon, sans-serif'}}>TED<span className="text-white" style={{ fontFamily: 'Bayon, sans-serif'}}>X</span>CITYUHONGKONG</TEDTitle>
+                    <TextHome style={{ fontFamily: 'Commissioner, sans-serif'}}>In the spirit of ideas worth spreading, <span className="text-black font-bold" >TED</span> has created a program called <span className="text-black font-bold" >TEDx</span>. 
+                    <span className="text-black font-bold" > TEDx</span> is a program of local, self-organized events that bring people together to share a <span className="text-black font-bold" >TED</span>-like experience. Our event is called <span className="text-black font-bold" >TEDx</span><span className="font-bold">CityUHongKong 2025</span>, where x = independently organized  <span className="text-black font-bold" >TED</span> event. At our <span className="text-black font-bold" >TEDx</span><span className="font-bold">CityUHongKong 2025</span> event, 
+                    <span className="text-black font-bold" >TED</span> Talks video and live speakers will combine to spark deep discussion and connection in a small group. The <span className="text-black font-bold" >TED</span> Conference provides general guidance for the <span className="text-black font-bold" >TED</span> program, but individual <span className="text-black font-bold" >TEDx</span> events, including ours, are self-organized.</TextHome>
+                    <TextHome>
+                        <ReadMoreLink onClick={() => handleNavigate('/about')}>
+                            <ReadMoreText src={ReadMore}/>
+                        </ReadMoreLink>
+                    </TextHome>
+                </RectShape>}
+                {/* <RectShape>
                     <div className="h-full flex flex-col">
                         <div className="relative">
                             <TEDPhoto src={TEDPhotoX} />
@@ -335,13 +351,13 @@ export default function AboutTedx({show = true}){
 
                             </TextHome>
                             <TextHome style={{ fontFamily: 'Commissioner, sans-serif', flexDirection: 'column' }}>
-                                <ReadMoreLink onClick={() => handleNavigate('/about')}>
+                                <ReadMoreLink onClick={() => handleNavigate('/abo')}>
                                     <ReadMoreText src={ReadMore}/>
                                 </ReadMoreLink>
                             </TextHome>
                         </div>
                     </div>
-                </RectShape>
+                </RectShape> */}
 
                 <TedxdescWrapper className="flex justify-center mx-5 md:mx-20 ">
                     {/* {!show && <Tedxdesc className="text-xl md:my-5">
