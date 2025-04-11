@@ -8,6 +8,7 @@ import Counter from "../Components/Counter";
 import AboutTedx from "../Components/aboutTedx";
 import SpeakerCard from "../Components/SpeakerCard";
 import PerformerCard from "../Components/PerformerCard";
+import SponsorCard from "../Components/SponsorCard";
 
 const Container = styled.div``;
 
@@ -37,6 +38,7 @@ export default function HomePage() {
             <AboutTedx show={false}/>
             <SpeakerCard />
             <PerformerCard />
+            <SponsorCard />
         </Container>
     );
 }
