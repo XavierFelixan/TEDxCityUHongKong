@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
 import Sponsordata from "../Data/SponsorData.json";
+import Footer from "./footer";
 
 const Container = styled.div`
   background-color: black;
@@ -42,31 +43,33 @@ const Image = styled.img`
   }
 
   @media (max-width: 768px) {
-    max-width: 50%;
-    max-height: auto;
+    max-width: 150px;
+    max-height: 50%;
   }
 
 `;
 
 export default function SponsorCard() {
-  return (
-    <Container>
-      <div className="mt-5 font-bold text-white text-center font-textfont text-4xl py-4 md:text-7xl md:py-7">
-        Sponsors
-      </div>
-      <CardWrapper>
-        {Sponsordata.map((item, index) => (
-          <Link key={index} to={``}>
-            <Card>
-              <Image 
-                src={require("../Assets/Members/Sponsor/" + item.img)}
-                alt={item.name}
-                className="rounded-md"
-              />
-            </Card>
-          </Link>
-        ))}
-      </CardWrapper>
-    </Container>
-  );
-}
+    return (
+      <section id="sponsor-section"> {}
+        <Container>
+          <div className="mt-5 font-bold text-white text-center font-textfont text-4xl py-4 md:text-7xl md:py-7">
+            Sponsors
+          </div>
+          <CardWrapper>
+            {Sponsordata.map((item, index) => (
+              <Link key={index} to={``}>
+                <Card>
+                  <Image 
+                    src={require("../Assets/Members/Sponsor/" + item.img)}
+                    alt={item.name}
+                    className="rounded-md"
+                  />
+                </Card>
+              </Link>
+            ))}
+          </CardWrapper>
+        </Container>
+      </section>
+    );
+  }
