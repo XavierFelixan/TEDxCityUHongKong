@@ -1,20 +1,20 @@
 [
   {
-    "img": "Harshini.jpg",
-    "fname" : "Harshini Anbazhagan",
-    "path" : "HarshiniAnbazhagan",
-    "country": "India"
+    "img": "pixel.JPG",
+    "fname" : "PIXEL",
+    "path" : "PIXEL",
+    "country": "Hong Kong"
   },
   {
-    "img": "Darren.jpg",
-    "fname" : "Darren Kesuma",
-    "path" : "DarrenKesuma",
-    "country": "Indonesia"
+    "img": "jj&keith.jpg",
+    "fname" : "JJ & Keith",
+    "path" : "JJ&Keith",
+    "country": "Philippines"
   },
   {
-    "img": "Frederick.jpg",
-    "fname" : "Frederick Nielsen Guretno",
-    "path" : "FrederickNielsenGuretno",
-    "country": "Indonesia"
+    "img": "acapella.jpeg",
+    "fname" : "A capella",
+    "path" : "Acapella",
+    "country": "Indonesia & Mainland China"
   }
 ]
