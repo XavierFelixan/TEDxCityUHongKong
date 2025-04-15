@@ -180,7 +180,13 @@ export default function Counter() {
             The secrets that we are referring may include industry insider insights, or the key to their personal successes. 
             We are giving the speakers a platform to talk about their inspiring achievements in a beneficial way for the audience.
           </DescriptionWrapper>
-          <Register className="md:text-3xl text-2xl"><span style={{border:'5px solid','font-weight':'bold','padding':'0 5px'}}>REGISTER NOW!</span></Register>
+          <Register className="md:text-3xl text-2xl">
+            <a href="https://forms.gle/C8ZV2JNfhEAnJ1GG9" target="_blank" rel="noopener noreferrer">
+              <span style={{border:'5px solid','font-weight':'bold','padding':'0 5px'}}>
+                REGISTER NOW!
+              </span>
+            </a>
+          </Register>
           </Left>
 
           <Right className="w-full md:w-1/2">

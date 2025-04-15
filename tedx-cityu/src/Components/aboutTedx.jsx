@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { styled } from "styled-components";
 import PastEvent from "../Assets/PastEvent.png";
 import PastSpeaker from "../Assets/Pastspeaker.png";
@@ -16,19 +16,6 @@ const ContentWrapper = styled.div``;
 const Partition = styled.div``;
 const TedxdescWrapper = styled.div``;
 const Tedxdesc = styled.div``;
-
-
-const ArtPic1 = styled.img`
-  width: 70%;
-  height: auto;
-`;
-
-const ArtPic2 = styled.img`
-  width: 100%;
-  height: auto;
-`;
-
-
 
 
 const Left1 = styled.div`
@@ -57,7 +44,7 @@ const Right = styled.div`
 
 
 const ArtWrapper = styled.div`
-  margin-top: 1.5rem;
+  marginTop: 1.5rem;
   display: flex;
   align-items: center;
 
@@ -69,7 +56,7 @@ const ArtWrapper = styled.div`
   }
 
   @media (min-width: 1024px) {
-    margin-top: 0;
+    marginTop: 0;
   }
 
   @media (max-width: 768px){
@@ -91,14 +78,13 @@ const RectShape = styled.div`
     background-color: #E00028;
     display: flex;
     flex-direction: column;
-    height: 50rem;
+    height: 52rem;
     width: 65rem;
     margin-bottom: 5rem;
-    z-index: -1;
 
-    @media (min-width: 769px) and (max-width: 1023px) { // Tablet view
+    @media (min-width: 768px) and (max-width: 1023px) { // Tablet view
     width : 50rem;
-    height: 60rem;
+    height: 57rem;
     }
 
     @media (max-width: 768px){
@@ -106,8 +92,8 @@ const RectShape = styled.div`
     height: 50rem;
     }
 
-    @media (max-width: 450px){
-        height: 45rem;
+    @media (max-width: 620px){
+    height : 700px;
     }
 `;
 const TEDPhoto = styled.img`
@@ -225,45 +211,46 @@ const XFrames = styled.img `
 `;
 
 const TextHome = styled.div`
-    position: absolute;
+    position: relative; /* Changed from absolute */
     text-align: start;
     color: white;
     font-weight: 600;
     font-size: 22px;
-    top: 26rem;
-    margin-left: 3rem;
-    margin-right: 3rem;
-
-    @media (min-width: 768px) and (max-width: 1023px) { // Tablet view
-    position: relative;
+    margin: 2rem 3rem; /* Added margin instead of top positioning */
     z-index: 1;
-    top: 2rem;
-    font-size: 15px;
-    text-align: center;
+    top: 3%;
+
+    @media (min-width: 768px) and (max-width: 1023px) {
+        font-size: 15px;
+        text-align: center;
+        margin: 1rem;
     }
 
     @media (max-width: 768px){
-    position: relative;
-    z-index: 1;
-    top: 2rem;
-    font-size: 12px;
-    right: 0px;
-    left: 0px;
-    margin: 0 6px;
-    text-align: center;
+        font-size: 12px;
+        margin: 0.5rem;
+        text-align: center;
     }
 `;
 
+const ReadMoreLink = styled.a`
+    text-align: center;
+    transition: all 0.3s ease;
+    &:hover {
+        cursor: pointer;
+        background-color: #FF0000;
+    }
+    
+`;
+
 const ReadMoreText = styled.img`
-    position: absolute;
-    top: 43rem;
     width: 15%;
-    left: 3.5rem;
+    left: 4.5%;
 
     @media (min-width: 768px) and (max-width: 1023px) { // Tablet view
     position: relative;
     width: 15%;
-    top: 8rem;
+    top: 10%;
     left: 0px;
     right: 0px;
     margin: 0 auto;
@@ -272,7 +259,7 @@ const ReadMoreText = styled.img`
     @media (max-width: 768px){
     position: relative;
     width: 18%;
-    top: 3.9rem;
+    top: 10%;
     left: 0px;
     right: 0px;
     margin: 0 auto;
@@ -298,7 +285,30 @@ const TitleResp = styled.div`
     }
 `;
 
+const Selection = styled.a`
+    padding: 5px;
+    text-align: center;
+    transition: all 0.3s ease;
+    &:hover {
+        // color: #FCBA2E;
+        cursor: pointer;
+        background-color: #FF0000;
+    }
+`;
+
 export default function AboutTedx({show = true}){
+    const navigate = useNavigate();
+
+    const handleNavigate = (path) => {
+        console.log(`Navigating to: ${path}`);
+        navigate(path);
+    };
+
+    useEffect(() => {
+        // This scrolls the page to the top on component mount
+        window.scrollTo(0, 0);
+      }, []);
+    
 
     return(
         <Container className="flex justify-center w-[100%] font-textfond">
@@ -306,8 +316,6 @@ export default function AboutTedx({show = true}){
                 {/* {!show && <Partition className="flex justify-center items-center min-w-full min-h-[400px] mb-5 bg-cover bg-no-repeat text-white text-7xl font-semibold font-textfont text-center md:text-left " style={{ backgroundImage: `url(${PastEvent})` }}>
                     What is TED
                 </Partition>} */}
-
-                
                 {!show &&<RectShape>
                     <TEDPhoto src={TEDPhotoX}></TEDPhoto>
                     <XFrames src={XFrame}/>
@@ -319,9 +327,41 @@ export default function AboutTedx({show = true}){
                     <TextHome style={{ fontFamily: 'Commissioner, sans-serif'}}>In the spirit of ideas worth spreading, <span className="text-black font-bold" >TED</span> has created a program called <span className="text-black font-bold" >TEDx</span>. 
                     <span className="text-black font-bold" > TEDx</span> is a program of local, self-organized events that bring people together to share a <span className="text-black font-bold" >TED</span>-like experience. Our event is called <span className="text-black font-bold" >TEDx</span><span className="font-bold">CityUHongKong 2025</span>, where x = independently organized  <span className="text-black font-bold" >TED</span> event. At our <span className="text-black font-bold" >TEDx</span><span className="font-bold">CityUHongKong 2025</span> event, 
                     <span className="text-black font-bold" >TED</span> Talks video and live speakers will combine to spark deep discussion and connection in a small group. The <span className="text-black font-bold" >TED</span> Conference provides general guidance for the <span className="text-black font-bold" >TED</span> program, but individual <span className="text-black font-bold" >TEDx</span> events, including ours, are self-organized.</TextHome>
-                    <ReadMoreText src={ReadMore}/>
+                    <TextHome>
+                        <ReadMoreLink onClick={() => handleNavigate('/about')}>
+                            <ReadMoreText src={ReadMore}/>
+                        </ReadMoreLink>
+                    </TextHome>
                 </RectShape>}
-                
+                {/* <RectShape>
+                    <div className="h-full flex flex-col">
+                        <div className="relative">
+                            <TEDPhoto src={TEDPhotoX} />
+                            <XFrames src={XFrame} />
+                            <TitleResp style={{ fontFamily: 'Bayon, sans-serif' }}>IDEAS EMBARK POSSIBILITIES</TitleResp>
+                            <TextIdeas style={{ fontFamily: 'Bayon, sans-serif' }}>IDEAS</TextIdeas>
+                            <TextEmbark style={{ fontFamily: 'Bayon, sans-serif' }}>EMBARK</TextEmbark>
+                            <TextPossibilities style={{ fontFamily: 'Bayon, sans-serif' }}>POSSIBILITIES</TextPossibilities>
+                            <TEDTitle style={{ fontFamily: 'Bayon, sans-serif' }}>
+                                TED<span className="text-white" style={{ fontFamily: 'Bayon, sans-serif' }}>X</span>CITYUHONGKONG
+                            </TEDTitle>
+                        </div>
+
+                        <div className="flex-grow">
+                            <TextHome style={{ fontFamily: 'Commissioner, sans-serif', flexDirection: 'column' }}>
+                                In the spirit of ideas worth spreading, <span className="text-black font-bold">TED</span> has created a program called <span className="text-black font-bold">TEDx</span>.
+                                <span className="text-black font-bold"> TEDx</span> is a program of local, self-organized events that bring people together to share a <span className="text-black font-bold">TED</span>-like experience. Our event is called <span className="text-black font-bold">TEDx</span><span className="font-bold">CityUHongKong 2025</span>, where x = independently organized <span className="text-black font-bold">TED</span> event. At our <span className="text-black font-bold">TEDx</span><span className="font-bold">CityUHongKong 2025</span> event,
+                                <span className="text-black font-bold">TED</span> Talks video and live speakers will combine to spark deep discussion and connection in a small group. The <span className="text-black font-bold">TED</span> Conference provides general guidance for the <span className="text-black font-bold">TED</span> program, but individual <span className="text-black font-bold">TEDx</span> events, including ours, are self-organized.
+
+                            </TextHome>
+                            <TextHome style={{ fontFamily: 'Commissioner, sans-serif', flexDirection: 'column' }}>
+                                <ReadMoreLink onClick={() => handleNavigate('/abo')}>
+                                    <ReadMoreText src={ReadMore}/>
+                                </ReadMoreLink>
+                            </TextHome>
+                        </div>
+                    </div>
+                </RectShape> */}
 
                 <TedxdescWrapper className="flex justify-center mx-5 md:mx-20 ">
                     {/* {!show && <Tedxdesc className="text-xl md:my-5">
@@ -356,7 +396,7 @@ export default function AboutTedx({show = true}){
                                 </div>
                             </Right>
                         </Container>
-                        <Container style={{clear:"both","margin-top":"8%"}}>
+                        <Container style={{clear:"both","marginTop":"8%"}}>
 
                             <Right className="w-full">
                                 <div className="font-bold text-2xl md:text-5xl mb-5">
