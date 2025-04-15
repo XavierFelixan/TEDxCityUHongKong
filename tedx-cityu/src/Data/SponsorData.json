@@ -1,10 +1,12 @@
 [
     {
       "img": "locobike.png",
-      "name" : "Locobike"
+      "name" : "Locobike",
+      "path" : "https://loco.hk/bike?redirect=/"
     },
     {
       "img": "wingman.png",
-      "name" : "Wingman"
+      "name" : "Wingman",
+      "path" : "https://wingman.hk/"
     }
   ]

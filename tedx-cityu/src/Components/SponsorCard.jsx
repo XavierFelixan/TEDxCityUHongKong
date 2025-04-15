@@ -58,7 +58,7 @@ export default function SponsorCard() {
           </div>
           <CardWrapper>
             {Sponsordata.map((item, index) => (
-              <Link key={index} to={``}>
+              <Link key={index} to={item.path} target="_blank" rel="noopener noreferrer">
                 <Card>
                   <Image 
                     src={require("../Assets/Members/Sponsor/" + item.img)}
