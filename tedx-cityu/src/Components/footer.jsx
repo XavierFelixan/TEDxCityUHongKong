@@ -29,7 +29,7 @@ export default function Footer() {
     const isHomepage = location.pathname === '/';
     const sizing = "w-11 h-11";
     const Social_media_logo = [<AiOutlineInstagram className={sizing}/>,  <AiFillLinkedin className={sizing}/>,  <AiOutlineFacebook className={sizing}/>, <AiFillYoutube className={sizing}/>];
-    const Link = ["https://www.instagram.com/tedxcityuhongkong/", "https://www.linkedin.com/company/tedxcityuhongkong/", "https://www.facebook.com/TEDxCityUHK/","https://www.youtube.com/@TEDx"];
+    const Link = ["https://www.instagram.com/tedxcityuhongkong/", "https://www.linkedin.com/company/tedxcityuhongkong/", "https://www.facebook.com/TEDxCityUHK/","https://youtube.com/@tedxcityuhongkong?si=zqA9FgialVaH8CGB"];
     return (
         <Container>
             <FollowUs $isHomepage={isHomepage} className="text-center md:text-7xl text-5xl top-1 md:top-2">FOLLOW US!</FollowUs>
