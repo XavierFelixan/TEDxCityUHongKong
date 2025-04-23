@@ -70,5 +70,13 @@
         "major": "Year 1, Computer Science",
         "origin": "Indonesia",
         "position": "Event Management and Procurement Manager"
+    },
+    {
+        "img": "Event Management/Kapria.jpg",
+        "fname": "Lau Pui Shan",
+        "lname": "Kapria",
+        "major": "Year 3, Psychology",
+        "origin": "Hong Kong",
+        "position": "Event Management and Procurement Manager"
     }
 ]

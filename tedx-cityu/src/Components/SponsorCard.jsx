@@ -53,7 +53,7 @@ export default function SponsorCard() {
     return (
       <section id="sponsor-section"> {}
         <Container>
-          <div className="mt-5 font-bold text-white text-center font-textfont text-4xl py-4 md:text-7xl md:py-7">
+          <div className="mt-5 font-bold text-red text-center font-textfont text-4xl py-4 md:text-7xl md:py-7">
             Sponsors
           </div>
           <CardWrapper>
