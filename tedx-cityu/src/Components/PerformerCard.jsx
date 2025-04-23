@@ -37,9 +37,9 @@ export default function PerformerCard() {
                     <div className="text-center font-textfont font-bold text-md md:text-3xl my-2 md:my-4">
                         {item.fname}
                     </div>
-                    <div className="absolute bottom-0 inset-x-0 text-center font-textfont text-md md:text-xl text-zinc-500">
+                    {/* <div className="absolute bottom-0 inset-x-0 text-center font-textfont text-md md:text-xl text-zinc-500">
                         {item.country}
-                    </div>
+                    </div> */}
                 </Performer>
             ))}
             </CardWrapper>

@@ -2,19 +2,16 @@
   {
     "img": "pixel.JPG",
     "fname" : "PIXEL",
-    "path" : "PIXEL",
-    "country": "Hong Kong"
+    "path" : "PIXEL"
   },
   {
     "img": "jj&keith.jpg",
     "fname" : "JJ & Keith",
-    "path" : "JJ&Keith",
-    "country": "Philippines"
+    "path" : "JJ&Keith"
   },
   {
     "img": "acapella.jpeg",
     "fname" : "A capella",
-    "path" : "Acapella",
-    "country": "Indonesia & Mainland China"
+    "path" : "Acapella"
   }
 ]
